@@ -9,7 +9,7 @@ import com.leetcode.oj.util.ListNode;
 
 public class LinkedListCycleTest {
 	
-	LinkedListCycle linkedList = new LinkedListCycle();
+	LinkedListCycle list = new LinkedListCycle();
     
     @Test
     public void testHasCycle0() {
@@ -43,11 +43,11 @@ public class LinkedListCycleTest {
     }
     
     private boolean hasCycle(int[] input) {
-    	ListNode list = ListNode.convert(input);
-    	return linkedList.hasCycle(list);
+    	ListNode node = ListNode.convert(input);
+    	return list.hasCycle(node);
     }
     private boolean hasCircleCycle(int[] input) {
-    	ListNode list = ListNode.circle(input);
-    	return linkedList.hasCycle(list);
+    	ListNode node = ListNode.circle(input);
+    	return list.hasCycle(node);
     }
 }

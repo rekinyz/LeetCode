@@ -1,5 +1,8 @@
 package com.leetcode.oj.util;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 /**
  * Definition for singly-linked list.
@@ -36,6 +39,16 @@ public class ListNode {
     		 head.next = list.next;
     	 }
     	 return list;
+     }
+
+     public List<Integer> toList(){
+    	 List<Integer> list = new ArrayList<Integer>();
+    	 ListNode current = this;
+         while(current != null){
+    		 list.add(current.val);
+    		 current = current.next;
+    	 }
+         return list;
      }
      
      public String toString(){

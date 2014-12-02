@@ -8,7 +8,7 @@ import com.leetcode.oj.util.ListNode;
  *  Follow up:
  *  Can you solve it without using extra space? 
  *   
- * 	@author z001raxe
+ * 	@author rekinyz
  */
 public class LinkedListCycle2 {
 
