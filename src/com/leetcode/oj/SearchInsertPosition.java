@@ -19,7 +19,7 @@ public class SearchInsertPosition {
 	//O(logN)
 	public int searchInsert(int[] A, int target) {
 		return searchInsert(A, target, 0, A.length);
-    }
+    	}
 	
 	private int searchInsert(int[] A, int target, int start, int end){
 		int M = (start+end)/2;
@@ -38,12 +38,13 @@ public class SearchInsertPosition {
 	//O(N)
 	public int searchInsert1(int[] A, int target) {
 		int len = A.length;
-		for(int i=0;i<len;i++){
+		int i = 0;
+		for(;i<len;i++){
 			if(target<=A[i]){
 				return i;
 			}
 		}
-		return 0;
+		return i;
 	}
 	
 }
