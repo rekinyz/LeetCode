@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Definition for singly-linked list.
  * 
- * @author z001raxe
+ * @author rekinyz
  */
 public class ListNode {
      public int val;
