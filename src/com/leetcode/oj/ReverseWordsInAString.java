@@ -21,7 +21,7 @@ package com.leetcode.oj;
  */
 public class ReverseWordsInAString {
     
-    public static String reverseWords(String s){
+    public String reverseWords(String s){
     	StringBuilder sb = new StringBuilder();
      	String[] split = s.split("\\s+");
      	int len = split.length;
@@ -31,7 +31,7 @@ public class ReverseWordsInAString {
      	return sb.toString().trim();
     }
     
-    public static String reverseWords1(String s){
+    public String reverseWords1(String s){
     	String r = "";
     	String[] split = s.split("\\s+");
     	int len = split.length;
