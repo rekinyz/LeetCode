@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Definition for binary tree
  * 
- * @author z001raxe
+ * @author rekinyz
  */
 public class TreeNode {
     public TreeNode left, right;
