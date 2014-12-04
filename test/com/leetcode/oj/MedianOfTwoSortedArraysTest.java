@@ -7,7 +7,7 @@ import org.junit.Test;
 public class MedianOfTwoSortedArraysTest {
 	
 	MedianOfTwoSortedArrays array = new MedianOfTwoSortedArrays();
-	private static final double epsilon = 1e-15;
+	private final double epsilon = 1e-15;
 	
     @Test
     public void testFindMin1() {
