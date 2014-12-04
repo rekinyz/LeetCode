@@ -7,4 +7,3 @@ In the util package are predefined datastructures with diverse useful methods e.
 
 enjoy solving!
 rekinyz
-
