@@ -11,22 +11,22 @@ public class BestTimeToBuyAndSellStockTest {
 	
     @Test
     public void testMaxProfit1() {
-    	int[] input = {3,2,2,6,5,0,3}; 	//4
+    	int[] input = {3,2,2,6,5,0,3}; 	//4 = 6-2
     	assertEquals(maxProfit(input), 4);
     }
     @Test
     public void testMaxProfit2() {
-    	int[] input = {6,1,1,3,2,4,7}; //6
+    	int[] input = {6,1,1,3,2,4,7}; //6 = 7-1
     	assertEquals(maxProfit(input), 6);
     }
     @Test
     public void testMaxProfit3() {
-    	int[] input = {8,1,3,2,4,7,7}; //6
+    	int[] input = {8,1,3,2,4,7,7}; //6 = 7-1
     	assertEquals(maxProfit(input), 6);
     }
     @Test
     public void testMaxProfit4() {
-    	int[] input = {8,9,7,6,4,1,1}; //1
+    	int[] input = {8,9,7,6,4,1,1}; //1 = 9-8
     	assertEquals(maxProfit(input), 1);
     }
     @Test
@@ -41,7 +41,7 @@ public class BestTimeToBuyAndSellStockTest {
     }
     @Test
     public void testMaxProfit7() {
-    	int[] input = {3,3,5,0,0,3,1,4}; //4
+    	int[] input = {3,3,5,0,0,3,1,4}; //4 = 4-0
     	assertEquals(maxProfit(input), 4);
     }
     @Test
