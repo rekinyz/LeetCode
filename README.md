@@ -6,5 +6,5 @@ I am not finished yet with all the problems on the LeetCode. I've tried to solve
 In the util package are predefined datastructures with diverse useful methods e.g. array to tree converter, tree printer, array to linkedlist converter etc.
 
 enjoy solving!
-
+rekinyz
 
