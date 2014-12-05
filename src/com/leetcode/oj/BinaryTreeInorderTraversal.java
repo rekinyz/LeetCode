@@ -33,7 +33,7 @@ public class BinaryTreeInorderTraversal {
 		List<Integer> result = new ArrayList<Integer>();
 		inorderTraversal(root, result);
 		return result;
-    }
+	}
 	
 	private void inorderTraversal(TreeNode root, List<Integer> result){
 		if(root!=null){
@@ -42,7 +42,7 @@ public class BinaryTreeInorderTraversal {
 			inorderTraversal(root.right, result);
 		}
 	}
-    
+
 	//print the tree to get intuitive view
 	public static void main(String[] args) {
 		BinaryTreeInorderTraversal tree = new BinaryTreeInorderTraversal();

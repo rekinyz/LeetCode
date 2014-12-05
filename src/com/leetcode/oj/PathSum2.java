@@ -30,12 +30,12 @@ import com.leetcode.oj.util.TreeNode;
  *
  */
 public class PathSum2 {
-    
+
 	public List<List<Integer>> pathSum(TreeNode root, int sum){
 		List<List<Integer>> result = new ArrayList<List<Integer>>();
 		findPaths(root, sum, new ArrayList<Integer>(), result);
-    	return result;
-    }
+		return result;
+	}
 	
 	private void findPaths(TreeNode root, int sum, List<Integer> path, List<List<Integer>> result){
 		//create each time new path list for every node of the tree

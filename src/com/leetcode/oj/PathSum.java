@@ -21,13 +21,13 @@ import com.leetcode.oj.util.TreeNode;
  *
  */
 public class PathSum {
-    
+
 	public boolean hasPathSum(TreeNode root, int sum) {
-       if(root!=null)
-    		return root.left==null && root.right==null && sum==root.val || hasPathSum(root.left, sum-root.val) || hasPathSum(root.right, sum-root.val);
-    	return false;
-    }
-    
+		if(root!=null)
+			return root.left==null && root.right==null && sum==root.val || hasPathSum(root.left, sum-root.val) || hasPathSum(root.right, sum-root.val);
+		return false;
+	}
+
 	//print the tree to get intuitive view
 	public static void main(String[] args) {
 		

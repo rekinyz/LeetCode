@@ -16,23 +16,23 @@ import java.util.Map;
 public class SingleNumber2 {
 
 	public int singleNumber(int[] A) {
-		Map<Integer,Integer> map = new HashMap<Integer,Integer>();
-        for(int a:A){
-        	Integer value = (Integer) map.get(a);
-        	if(value!=null){
-        		map.put(a, ++value);
-        	}else{
-        		map.put(a, 1);
-        	}
-        }
-        for(int a:A){
-        	Integer value = (Integer) map.get(a);
-        	if(value==1){
-        		return a;
-        	}
-        }
-        return 0;
-    }
+		Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+		for (int a : A) {
+			Integer value = map.get(a);
+			if (value != null) {
+				map.put(a, ++value);
+			} else {
+				map.put(a, 1);
+			}
+		}
+		for (int a : A) {
+			Integer value = map.get(a);
+			if (value == 1) {
+				return a;
+			}
+		}
+		return 0;
+	}
 	
 	public int singleNumber1(int[] A) {
 		int ones = 0, twos = 0;

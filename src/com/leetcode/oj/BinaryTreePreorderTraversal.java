@@ -33,7 +33,7 @@ public class BinaryTreePreorderTraversal {
 		List<Integer> result = new ArrayList<Integer>();
 		preorderTraversal(root, result);
 		return result;
-    }
+	}
 	
 	private void preorderTraversal(TreeNode root, List<Integer> result){
 		if(root!=null){
@@ -42,7 +42,7 @@ public class BinaryTreePreorderTraversal {
 			preorderTraversal(root.right, result);
 		}
 	}
-    
+
 	//print the tree to get intuitive view
 	public static void main(String[] args) {
 		BinaryTreePreorderTraversal tree = new BinaryTreePreorderTraversal();

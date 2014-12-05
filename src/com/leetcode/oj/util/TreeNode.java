@@ -10,112 +10,111 @@ import java.util.List;
  * @author rekinyz
  */
 public class TreeNode {
-    public TreeNode left, right;
-    public int val;
+	public TreeNode left, right;
+	public int val;
 
-    public TreeNode(int val) {
-        this.val = val;
-    }
-    
-    public static TreeNode convert(Integer[] array){
-        TreeNode root = createTreeNode(array,1);
-        return root;
-    }
-	   
-    private static TreeNode createTreeNode(Integer[] input, int index){
-    	if(index<=input.length){
-            Integer value = input[index-1];
-            if(value!=null){
-                TreeNode t = new TreeNode(value);
-                t.left = createTreeNode(input, index*2);
-                t.right = createTreeNode(input, index*2+1);
-                return t;
-            }
-        }
-        return null;
-    }
-    
-    
-    public static void print(TreeNode root) {
-        int maxLevel = maxLevel(root);
+	public TreeNode(int val) {
+		this.val = val;
+	}
 
-        printTreeNodeInternal(Collections.singletonList(root), 1, maxLevel);
-    }
+	public static TreeNode convert(Integer[] array) {
+		TreeNode root = createTreeNode(array, 1);
+		return root;
+	}
 
-    private static void printTreeNodeInternal(List<TreeNode> TreeNodes, int level, int maxLevel) {
-        if (TreeNodes.isEmpty() || isAllElementsNull(TreeNodes))
-            return;
+	private static TreeNode createTreeNode(Integer[] input, int index) {
+		if (index <= input.length) {
+			Integer value = input[index - 1];
+			if (value != null) {
+				TreeNode t = new TreeNode(value);
+				t.left = createTreeNode(input, index * 2);
+				t.right = createTreeNode(input, index * 2 + 1);
+				return t;
+			}
+		}
+		return null;
+	}
 
-        int floor = maxLevel - level;
-        int endgeLines = (int) Math.pow(2, (Math.max(floor - 1, 0)));
-        int firstSpaces = (int) Math.pow(2, (floor)) - 1;
-        int betweenSpaces = (int) Math.pow(2, (floor + 1)) - 1;
+	public static void print(TreeNode root) {
+		int maxLevel = maxLevel(root);
 
-        printWhitespaces(firstSpaces);
+		printTreeNodeInternal(Collections.singletonList(root), 1, maxLevel);
+	}
 
-        List<TreeNode> newTreeNodes = new ArrayList<TreeNode>();
-        for (TreeNode treeNode : TreeNodes) {
-            if (treeNode != null) {
-                System.out.print(treeNode.val);
-                newTreeNodes.add(treeNode.left);
-                newTreeNodes.add(treeNode.right);
-            } else {
-                newTreeNodes.add(null);
-                newTreeNodes.add(null);
-                System.out.print(" ");
-            }
+	private static void printTreeNodeInternal(List<TreeNode> TreeNodes, int level, int maxLevel) {
+		if (TreeNodes.isEmpty() || isAllElementsNull(TreeNodes))
+			return;
 
-            printWhitespaces(betweenSpaces);
-        }
-        System.out.println(" ");
+		int floor = maxLevel - level;
+		int endgeLines = (int) Math.pow(2, (Math.max(floor - 1, 0)));
+		int firstSpaces = (int) Math.pow(2, (floor)) - 1;
+		int betweenSpaces = (int) Math.pow(2, (floor + 1)) - 1;
 
-        for (int i = 1; i <= endgeLines; i++) {
-            for (int j = 0; j < TreeNodes.size(); j++) {
-                printWhitespaces(firstSpaces - i);
-                if (TreeNodes.get(j) == null) {
-                    printWhitespaces(2*endgeLines + i + 1);
-                    continue;
-                }
+		printWhitespaces(firstSpaces);
 
-                if (TreeNodes.get(j).left != null)
-                    System.out.print("/");
-                else
-                    printWhitespaces(1);
+		List<TreeNode> newTreeNodes = new ArrayList<TreeNode>();
+		for (TreeNode treeNode : TreeNodes) {
+			if (treeNode != null) {
+				System.out.print(treeNode.val);
+				newTreeNodes.add(treeNode.left);
+				newTreeNodes.add(treeNode.right);
+			} else {
+				newTreeNodes.add(null);
+				newTreeNodes.add(null);
+				System.out.print(" ");
+			}
 
-                printWhitespaces(2*i-1);
+			printWhitespaces(betweenSpaces);
+		}
+		System.out.println(" ");
 
-                if (TreeNodes.get(j).right != null)
-                    System.out.print("\\");
-                else
-                    printWhitespaces(1);
+		for (int i = 1; i <= endgeLines; i++) {
+			for (int j = 0; j < TreeNodes.size(); j++) {
+				printWhitespaces(firstSpaces - i);
+				if (TreeNodes.get(j) == null) {
+					printWhitespaces(2 * endgeLines + i + 1);
+					continue;
+				}
 
-                printWhitespaces(2*endgeLines-i);
-            }
+				if (TreeNodes.get(j).left != null)
+					System.out.print("/");
+				else
+					printWhitespaces(1);
 
-            System.out.println("");
-        }
+				printWhitespaces(2 * i - 1);
 
-        printTreeNodeInternal(newTreeNodes, level + 1, maxLevel);
-    }
+				if (TreeNodes.get(j).right != null)
+					System.out.print("\\");
+				else
+					printWhitespaces(1);
 
-    private static void printWhitespaces(int count) {
-        for (int i = 0; i < count; i++)
-            System.out.print(" ");
-    }
+				printWhitespaces(2 * endgeLines - i);
+			}
 
-    private static int maxLevel(TreeNode TreeNode) {
-        if (TreeNode == null)
-            return 0;
+			System.out.println("");
+		}
 
-        return Math.max(maxLevel(TreeNode.left), maxLevel(TreeNode.right)) + 1;
-    }
+		printTreeNodeInternal(newTreeNodes, level + 1, maxLevel);
+	}
 
-    private static  boolean isAllElementsNull(List<TreeNode> list) {
-        for (TreeNode node : list) {
-            if (node != null)
-                return false;
-        }
+	private static void printWhitespaces(int count) {
+		for (int i = 0; i < count; i++)
+			System.out.print(" ");
+	}
 
-        return true;
-    }
+	private static int maxLevel(TreeNode TreeNode) {
+		if (TreeNode == null)
+			return 0;
+
+		return Math.max(maxLevel(TreeNode.left), maxLevel(TreeNode.right)) + 1;
+	}
+
+	private static boolean isAllElementsNull(List<TreeNode> list) {
+		for (TreeNode node : list) {
+			if (node != null)
+				return false;
+		}
+
+		return true;
+	}
 }
