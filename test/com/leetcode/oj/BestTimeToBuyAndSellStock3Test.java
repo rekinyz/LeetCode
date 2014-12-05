@@ -68,6 +68,11 @@ public class BestTimeToBuyAndSellStock3Test {
     	int[] input = {2,1,4,5,2,9,7}; //11 = 5-1 + 9-2
     	assertEquals(maxProfit(input), 11);
     }
+    @Test
+    public void testMaxProfit13() {
+    	int[] input = {1,2,4,2,5,7,2,4,9,0}; //13 = 7-1 + 9-2
+    	assertEquals(maxProfit(input), 13);
+    }
     
     private int maxProfit(int[] input) {
     	return stock.maxProfit(input);
