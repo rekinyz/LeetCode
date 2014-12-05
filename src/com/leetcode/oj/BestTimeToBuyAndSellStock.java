@@ -18,12 +18,12 @@ public class BestTimeToBuyAndSellStock {
 		int profit = 0;
 		if(len!=0){
 			int minIdx = 0;
-	        for(int i=0;i<len;i++){
-	        	if(prices[minIdx] > prices[i]){
-	        		minIdx = i;
-	        	}
-	        	profit = Math.max(profit, prices[i]-prices[minIdx]);
-	        }
+	        	for(int i=0;i<len;i++){
+		        	if(prices[minIdx] > prices[i]){
+		        		minIdx = i;
+		        	}
+		        	profit = Math.max(profit, prices[i]-prices[minIdx]);
+		        }
 		}
         return profit;
     }
