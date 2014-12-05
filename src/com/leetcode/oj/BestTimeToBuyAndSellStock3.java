@@ -16,37 +16,31 @@ package com.leetcode.oj;
 
 public class BestTimeToBuyAndSellStock3 {
 	
-	//TODO not solved
+	//O(N) + Space(N)
 	public int maxProfit(int[] prices) {
 		int len = prices.length;
 		int profit = 0;
+		int[] left = new int[len+1];
+		int[] right = new int[len+1];
+		int minIdx = 0;
+		int maxIdx = len-1;
 		if(len>1){
-			for(int breakIdx=1; breakIdx<len-1; breakIdx++){
-				int profit1 = 0;
-				int profit2 = 0;
-				int minIdx = 0;
-				for(int i=0;i<breakIdx;i++){
-					if(prices[minIdx] > prices[i]){
-						minIdx = i;
-					}
-					profit1 = Math.max(profit1, prices[i]-prices[minIdx]);
+			for(int i=1;i<len;i++){
+				if(prices[minIdx] > prices[i-1]){
+					minIdx = i-1;
 				}
-				minIdx = breakIdx;
-		        for(int i=minIdx; i<len; i++){
-		        	if(prices[minIdx] > prices[i]){
-		        		minIdx = i;
-		        	}
-		        	profit2 = Math.max(profit2, prices[i]-prices[minIdx]);
-		        }
-		        profit = Math.max(profit, profit1+profit2);
+				left[i] = Math.max(left[i-1], prices[i-1]-prices[minIdx]);
 			}
 			
-			int minIdx = 0;
-			for(int i=0;i<len;i++){
-				if(prices[minIdx] > prices[i]){
-					minIdx = i;
-				}
-				profit = Math.max(profit, prices[i]-prices[minIdx]);
+	        for(int i=len-1; i>0; i--){
+	        	if(prices[maxIdx] < prices[i-1]){
+	        		maxIdx = i-1;
+	        	}
+	        	right[i] = Math.max(right[i+1], prices[maxIdx]-prices[i-1]);
+	        }
+			
+			for(int i=0;i<len-1;i++){
+				profit = Math.max(profit, right[i+1]+left[i]);
 			}
 		}
         return profit;
