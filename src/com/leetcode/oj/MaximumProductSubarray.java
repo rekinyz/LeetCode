@@ -13,8 +13,25 @@ package com.leetcode.oj;
  */
 public class MaximumProductSubarray {
 
-	// TODO O(N²) -> O(N)
+	// O(N)
 	public int maxProduct(int[] A) {
+		int len = A.length, max = Integer.MIN_VALUE;
+		int productLeft = 1, productRight = 1;
+		for (int i = 0, j = len - 1; i < len; i++, j--) {
+			max = Math.max(max, productLeft *= A[i]);
+			if (productLeft == 0) {
+				productLeft = 1;
+			}
+			max = Math.max(max, productRight *= A[j]);
+			if (productRight == 0) {
+				productRight = 1;
+			}
+		}
+		return max;
+	}
+		
+	// O(N²)
+	public int maxProduct1(int[] A) {
 		int max = A[0], tmp;
 		for (int i = 0; i < A.length; i++) {
 			tmp = A[i];
