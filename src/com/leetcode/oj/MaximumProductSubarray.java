@@ -15,7 +15,7 @@ public class MaximumProductSubarray {
 
 	// O(N)
 	public int maxProduct(int[] A) {
-		int len = A.length, max = Integer.MIN_VALUE;
+		int len = A.length, max = A[0];
 		int productLeft = 1, productRight = 1;
 		for (int i = 0, j = len - 1; i < len; i++, j--) {
 			max = Math.max(max, productLeft *= A[i]);
