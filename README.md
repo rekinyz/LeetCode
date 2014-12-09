@@ -1,4 +1,4 @@
-Problems solving with Algorithms
+Problem solving with Algorithms
 =========================
 
 There are some typical approaches/techniques such as Divide-and-conquer, Dynamic Programming, Greedy, Backtracking, Branch-and-Bound... etc. that can help us organize the thinking by solving algorithm problems. Personally, I will suggest you to get at least some basic information of these approaches before or after you starting with the problems.
