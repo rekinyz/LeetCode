@@ -5,7 +5,7 @@ There are some typical approaches/techniques such as Divide-and-conquer, Dynamic
 
 Leetcode provides a library with more than 160 questions. I am not finished yet with all of them. I've tried to solve these problems with good time and space complexity as far as possible (no warranty, I am still working on it). Though you could use my test cases to check more or less the correctness of your own solution before you commit them to the Leetcode. The unit tests are not perfect either, so welcome improve them.
 
-By the way, I have also committed the predefined data structures into the util package with diverse useful methods e.g. array to tree converter, tree printer, array to linkedlist converter etc. Feel free to use them or extend them for simplifying the tests.
+Besides I have committed the predefined data structures into the util package with diverse useful methods e.g. array to tree converter, tree printer, array to linkedlist converter etc. Feel free to use them or extend them for simplifying the tests.
 
 enjoy solving!
 
