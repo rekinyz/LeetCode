@@ -28,25 +28,4 @@ public class LongestSubstringWithoutRepeatingCharacters {
 		return max;
 	}
 
-	public static void main(String[] args) {
-		LongestSubstringWithoutRepeatingCharacters ls = new LongestSubstringWithoutRepeatingCharacters();
-
-		String input0 = "";
-		String input1 = "abcabcbb"; // abc
-		String input2 = "bbbbb"; // b
-		String input3 = "abbabb"; // ab
-		String input4 = "abcadcb"; // adcb
-		String input5 = "abcdabcdefgdefg"; // abcdefg
-		String input6 = "wlrbbmqbhcdarzowkkyhiddqscdxrjmowfrxsjybldbefsarcbynecdyggxxpklorellnmpapqfwkhopkmco"; // mqbhcdarzowk
-
-		System.out.println(ls.lengthOfLongestSubstring(input0)); // 0
-		System.out.println(ls.lengthOfLongestSubstring(input1)); // 3
-		System.out.println(ls.lengthOfLongestSubstring(input2)); // 1
-		System.out.println(ls.lengthOfLongestSubstring(input3)); // 2
-		System.out.println(ls.lengthOfLongestSubstring(input4)); // 4
-		System.out.println(ls.lengthOfLongestSubstring(input5)); // 7
-		System.out.println(ls.lengthOfLongestSubstring(input6)); // 12
-
-	}
-
 }
