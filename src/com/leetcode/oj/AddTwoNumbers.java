@@ -14,58 +14,38 @@ import com.leetcode.oj.util.ListNode;
  */
 public class AddTwoNumbers {
 	public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-		if (l1 == null) {
-			return l2;
-		}
-		if (l2 == null) {
-			return l1;
-		}
 		ListNode p = null;
 		ListNode res = null;
 		int tmp = 0;
-		int sum = 0;
-		if (l1 != null && l2 != null) {
-			sum = l1.val + l2.val + tmp;
-			if (sum >= 10) {
-				sum -= 10;
-				tmp++;
-			}
-			p = new ListNode(sum);
-			res = p;
-			l2 = l2.next;
+		return addTwoNumbers(l1, l2, p, res, tmp);
+	}
+
+	private ListNode addTwoNumbers(ListNode l1, ListNode l2, ListNode p, ListNode res, int tmp) {
+		int v1 = 0, v2 = 0, sum = 0;
+		if (l1 != null) {
+			v1 = l1.val;
 			l1 = l1.next;
 		}
-		while (l1 != null || l2 != null) {
-			if (l1 == null) {
-				sum = l2.val + tmp;
-				tmp=0;
-				if (sum >= 10) {
-					sum-=10;
-					tmp++;
-				}
-				l2 = l2.next;
-			} else if (l2 == null) {
-				sum = l1.val + tmp;
-				tmp=0;
-				if (sum >= 10) {
-					sum-=10;
-					tmp++;
-				}
-				l1 = l1.next;
-			} else {
-				sum = l1.val + l2.val + tmp;
-				tmp=0;
-				if (sum >= 10) {
-					sum-=10;
-					tmp++;
-				}
-				l2 = l2.next;
-				l1 = l1.next;
-			}
+		if (l2 != null) {
+			v2 = l2.val;
+			l2 = l2.next;
+		}
+		sum = v1 + v2 + tmp;
+		tmp=0;
+		if (sum > 9) {
+			sum -= 10;
+			tmp++;
+		}
+		if (p == null) {
+			p = new ListNode(sum);
+			res = p;
+		} else {
 			p.next = new ListNode(sum);
 			p = p.next;
 		}
-		if(l1 == null && l2 == null & tmp!=0){
+		if(l1!=null||l2!=null){
+			addTwoNumbers(l1, l2, p, res, tmp);
+		}else if(tmp!=0){
 			p.next = new ListNode(tmp);
 		}
 		return res;
