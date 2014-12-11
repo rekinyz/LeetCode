@@ -13,6 +13,7 @@ import com.leetcode.oj.util.ListNode;
  *
  */
 public class AddTwoNumbers {
+
 	public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 		ListNode p = null, res = null;
 		int carry = 0;
@@ -29,7 +30,8 @@ public class AddTwoNumbers {
 			sum += l2.val;
 			l2 = l2.next;
 		}
-		sum += carry; carry = 0;
+		sum += carry;
+		carry = 0;
 		if (sum > 9) {
 			sum -= 10;
 			carry++;
