@@ -57,7 +57,7 @@ public class ReverseInteger {
 
 		Long result = (x < 0 ? -1 : 1) * Long.parseLong(sb.toString());
 
-		if (result > 1 << 31 - 1 || result < 1 << 31) {
+		if (result > (1 << 31) - 1 || result < 1 << 31) {
 			return 0;
 		}
 
