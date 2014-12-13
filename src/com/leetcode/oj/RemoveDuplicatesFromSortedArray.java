@@ -1,6 +1,5 @@
 package com.leetcode.oj;
 
-
 /**
  * Remove Duplicates from Sorted Array
  * 
