@@ -1,6 +1,5 @@
 package com.leetcode.oj;
 
-import java.util.Arrays;
 
 /**
  * Remove Duplicates from Sorted Array
