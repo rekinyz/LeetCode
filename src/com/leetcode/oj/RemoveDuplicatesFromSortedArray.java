@@ -36,14 +36,4 @@ public class RemoveDuplicatesFromSortedArray {
 		return len -= count;
 	}
 
-	public static void main(String[] args) {
-		RemoveDuplicatesFromSortedArray rdsa = new RemoveDuplicatesFromSortedArray();
-
-		int[] input1 = { 1, 1, 2 };
-
-		System.out.println(rdsa.removeDuplicates(input1)); // 2
-		System.out.println(Arrays.toString(input1)); // [1,2]
-
-	}
-
 }
