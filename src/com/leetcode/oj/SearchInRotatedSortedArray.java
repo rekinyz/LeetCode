@@ -16,11 +16,41 @@ package com.leetcode.oj;
  *
  */
 public class SearchInRotatedSortedArray {
-	
-	//O(N)
+
+	// O(logN)
 	public int search(int[] A, int target) {
-		for(int i=0;i<A.length;i++){
-			if(A[i]==target){
+		return search(A, 0, A.length, target);
+	}
+	    
+    private int search(int[] A, int start, int end, int target){
+		int mid = (start + end) / 2;
+		int S = A[start];
+		int M = A[mid];
+		int E = A[end-1];
+		
+		if(target==M) return mid;
+		
+		if(end-start>1){
+			if(S<=M){
+				if(S<=target && target<=M)
+					return search(A, start, mid, target);
+				else
+					return search(A, mid, end, target);
+			}else{
+				if(M<=target && target<=E)
+					return search(A, mid, end, target);
+				else
+					return search(A, start, mid, target);
+			}
+		}
+		
+		return -1;
+	}
+
+	// O(N)
+	public int search1(int[] A, int target) {
+		for (int i = 0; i < A.length; i++) {
+			if (A[i] == target) {
 				return i;
 			}
 		}
