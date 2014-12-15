@@ -29,14 +29,18 @@ public class ListNode {
 		return list;
 	}
 
-	public static ListNode circle(int[] array) {
+	public static ListNode cycle(int[] array, int n) {
 		ListNode head = new ListNode(array[0]);
 		ListNode list = head;
 		for (int i = 1; i < array.length; i++, head = head.next) {
 			head.next = new ListNode(array[i]);
 		}
 		if (head.next == null) {
-			head.next = list.next;
+			ListNode newHead = list;
+			for (; n > 1; n--) {
+				newHead = newHead.next;
+			}
+			head.next = newHead;
 		}
 		return list;
 	}
