@@ -31,28 +31,35 @@ public class LinkedListCycle2Test {
 	@Test
 	public void testDetectCycle3() {
 		int[] input = { 0, 1, 2, 4, 5, 6, 7 };
-		assertEquals(detectCircleCycle(input).val, 1);
+		assertEquals(detectCycle(input, 2).val, 1);
 	}
 
 	@Test
 	public void testDetectCycle4() {
 		int[] input = { 2, 3, 4, 4, 5 };
-		assertEquals(detectCircleCycle(input).val, 3);
+		assertEquals(detectCycle(input, 3).val, 4);
 	}
 
 	@Test
 	public void testDetectCycle5() {
 		int[] input = { 3, 2, 0, -4 };
-		assertEquals(detectCircleCycle(input).val, 2);
+		assertEquals(detectCycle(input, 1).val, 3);
 	}
 
+	@Test
+	public void testDetectCycle6() {
+		int[] input = { 3, 2, 0, -4 };
+		assertEquals(detectCycle(input, 4).val, -4);
+	}
+	
 	private ListNode detectCycle(int[] input) {
 		ListNode node = ListNode.convert(input);
 		return list.detectCycle(node);
 	}
 
-	private ListNode detectCircleCycle(int[] input) {
-		ListNode node = ListNode.circle(input);
+	private ListNode detectCycle(int[] input, int n) {
+		ListNode node = ListNode.cycle(input, n);
 		return list.detectCycle(node);
 	}
+	
 }
