@@ -21,7 +21,7 @@ package com.leetcode.oj;
  */
 public class CompareVersionNumbers {
 
-	public int compareVersion(String version1, String version2) {
+	public int compareVersion1(String version1, String version2) {
 		String[] ver1 = version1.split("\\.");
 		String[] ver2 = version2.split("\\.");
 		int maxLen = Math.max(ver1.length, ver2.length);
@@ -37,6 +37,25 @@ public class CompareVersionNumbers {
 			if (newVer1[i] > newVer2[i]) {
 				return 1;
 			} else if (newVer1[i] < newVer2[i]) {
+				return -1;
+			}
+		}
+		return 0;
+	}
+
+	public int compareVersion(String version1, String version2) {
+		String[] ver1 = version1.split("\\.");
+		String[] ver2 = version2.split("\\.");
+		int l1 = ver1.length;
+		int l2 = ver2.length;
+		int maxLen = Math.max(l1, l2);
+		int v1, v2;
+		for (int i = 0; i < maxLen; i++) {
+			v1 = (i >= l1 ? 0 : Integer.parseInt(ver1[i]));
+			v2 = (i >= l2 ? 0 : Integer.parseInt(ver2[i]));
+			if (v1 > v2) {
+				return 1;
+			} else if (v1 < v2) {
 				return -1;
 			}
 		}
