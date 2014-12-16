@@ -28,11 +28,11 @@ public class CompareVersionNumbers {
 		int[] newVer1 = new int[maxLen];
 		int[] newVer2 = new int[maxLen];
 		for (int i = 0; i < maxLen; i++) {
-			if(i<ver1.length){
-				newVer1[i] = Integer.valueOf(ver1[i]);
+			if (i < ver1.length) {
+				newVer1[i] = Integer.parseInt(ver1[i]);
 			}
-			if(i<ver2.length){
-				newVer2[i] = Integer.valueOf(ver2[i]);
+			if (i < ver2.length) {
+				newVer2[i] = Integer.parseInt(ver2[i]);
 			}
 			if (newVer1[i] > newVer2[i]) {
 				return 1;
