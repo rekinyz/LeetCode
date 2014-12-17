@@ -14,19 +14,19 @@ public class AnagramsTest {
 	@Test
 	public void testAnagrams1(){
 		String[] strs = { "earth", "asdf", "heart" };
-		assertEquals(anagrams(strs), Arrays.asList("earth", "heart"));
+		assertEquals(Arrays.asList("earth", "heart"), anagrams(strs));
 	}
 	
 	@Test
 	public void testAnagrams2(){
 		String[] strs = { "earth", "roll in the hay", "heart", "thrill a honey" };
-		assertEquals(anagrams(strs), Arrays.asList("earth", "heart", "roll in the hay", "thrill a honey"));
+		assertEquals(Arrays.asList("earth", "heart", "roll in the hay", "thrill a honey"), anagrams(strs));
 	}
 	
 	@Test
 	public void testAnagrams3(){
 		String[] strs = { "james stuart", "just a master" };
-		assertEquals(anagrams(strs), Arrays.asList("james stuart", "just a master"));
+		assertEquals(Arrays.asList("james stuart", "just a master"), anagrams(strs));
 	}
 	
 	private List<String> anagrams(String[] strs){
