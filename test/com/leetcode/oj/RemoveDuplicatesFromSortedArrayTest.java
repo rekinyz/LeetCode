@@ -11,31 +11,31 @@ public class RemoveDuplicatesFromSortedArrayTest {
 	@Test
 	public void testRemoveDuplicates1() {
 		int[] input = { 1, 1, 2 };
-		assertEquals(removeDuplicates(input), 2);
+		assertEquals(2, removeDuplicates(input));
 	}
 
 	@Test
 	public void testRemoveDuplicates2() {
 		int[] input = { 1, 1, 2, 2, 3, 3, 4 };
-		assertEquals(removeDuplicates(input), 4);
+		assertEquals(4, removeDuplicates(input));
 	}
 
 	@Test
 	public void testRemoveDuplicates3() {
 		int[] input = { 1, 2, 2, 2, 2, 2 };
-		assertEquals(removeDuplicates(input), 2);
+		assertEquals(2, removeDuplicates(input));
 	}
 
 	@Test
 	public void testRemoveDuplicates4() {
 		int[] input = {};
-		assertEquals(removeDuplicates(input), 0);
+		assertEquals(0, removeDuplicates(input));
 	}
 
 	@Test
 	public void testRemoveDuplicates5() {
 		int[] input = { 1 };
-		assertEquals(removeDuplicates(input), 1);
+		assertEquals(1, removeDuplicates(input));
 	}
 
 	private int removeDuplicates(int[] input) {

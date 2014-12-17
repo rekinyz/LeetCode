@@ -21,7 +21,7 @@ public class SubsetsTest {
 				Arrays.asList(1), Arrays.asList(2), Arrays.asList(1, 2));
 		for (int i = 0; i < 4; i++) {
 			for (int j = 0; j < res.get(i).size(); j++) {
-				assertEquals(res.get(i).get(j), expected.get(i).get(j));
+				assertEquals(expected.get(i).get(j), res.get(i).get(j));
 			}
 		}
 	}
@@ -39,7 +39,7 @@ public class SubsetsTest {
 
 		for (int i = 0; i < 8; i++) {
 			for (int j = 0; j < res.get(i).size(); j++) {
-				assertEquals(res.get(i).get(j), expected.get(i).get(j));
+				assertEquals(expected.get(i).get(j), res.get(i).get(j));
 			}
 		}
 	}
@@ -57,7 +57,7 @@ public class SubsetsTest {
 
 		for (int i = 0; i < 8; i++) {
 			for (int j = 0; j < res.get(i).size(); j++) {
-				assertEquals(res.get(i).get(j), expected.get(i).get(j));
+				assertEquals(expected.get(i).get(j), res.get(i).get(j));
 			}
 		}
 	}
