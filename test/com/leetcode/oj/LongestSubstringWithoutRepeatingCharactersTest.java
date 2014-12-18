@@ -11,43 +11,47 @@ public class LongestSubstringWithoutRepeatingCharactersTest {
 	@Test
 	public void testLengthOfLongestSubstring1() {
 		String s = "";
-		assertEquals(lswrc.lengthOfLongestSubstring(s), 0);
+		assertEquals(0, lengthOfLongestSubstring(s));
 	}
 
 	@Test
 	public void testLengthOfLongestSubstring2() {
 		String s = "abcabcbb"; // abc
-		assertEquals(lswrc.lengthOfLongestSubstring(s), 3);
+		assertEquals(3, lengthOfLongestSubstring(s));
 	}
 
 	@Test
 	public void testLengthOfLongestSubstring3() {
 		String s = "bbbbb"; // b
-		assertEquals(lswrc.lengthOfLongestSubstring(s), 1);
+		assertEquals(1, lengthOfLongestSubstring(s));
 	}
 
 	@Test
 	public void testLengthOfLongestSubstring4() {
 		String s = "abbabb"; // ab
-		assertEquals(lswrc.lengthOfLongestSubstring(s), 2);
+		assertEquals(2, lengthOfLongestSubstring(s));
 	}
 
 	@Test
 	public void testLengthOfLongestSubstring5() {
 		String s = "abcadcb"; // adcb
-		assertEquals(lswrc.lengthOfLongestSubstring(s), 4);
+		assertEquals(4, lengthOfLongestSubstring(s));
 	}
 
 	@Test
 	public void testLengthOfLongestSubstring6() {
 		String s = "abcdabcdefgdefg"; // abcdefg
-		assertEquals(lswrc.lengthOfLongestSubstring(s), 7);
+		assertEquals(7, lengthOfLongestSubstring(s));
 	}
 
 	@Test
 	public void testLengthOfLongestSubstring7() {
 		String s = "wlrbbmqbhcdarzowkkyhiddqscdxrjmowfrxsjybldbefsarcbynecdyggxxpklorellnmpapqfwkhopkmco"; // mqbhcdarzowk
-		assertEquals(lswrc.lengthOfLongestSubstring(s), 12);
+		assertEquals(12, lengthOfLongestSubstring(s));
+	}
+	
+	private int lengthOfLongestSubstring(String s){
+		return lswrc.lengthOfLongestSubstring(s);
 	}
 
 }

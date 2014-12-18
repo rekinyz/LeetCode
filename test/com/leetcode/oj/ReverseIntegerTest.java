@@ -10,37 +10,37 @@ public class ReverseIntegerTest {
 
 	@Test
 	public void testReverse0() {
-		assertEquals(reverse(+123456789), 987654321);
+		assertEquals(987654321, reverse(+123456789));
 	}
 
 	@Test
 	public void testReverse1() {
-		assertEquals(reverse(-123456789), -987654321);
+		assertEquals(-987654321, reverse(-123456789));
 	}
 
 	@Test
 	public void testReverse2() {
-		assertEquals(reverse(1000000003), 0); // overflow
+		assertEquals(0, reverse(1000000003)); // overflow
 	}
 
 	@Test
 	public void testReverse3() {
-		assertEquals(reverse(Integer.MAX_VALUE), 0); // overflow
+		assertEquals(0, reverse(Integer.MAX_VALUE)); // overflow
 	}
 
 	@Test
 	public void testReverse4() {
-		assertEquals(reverse(Integer.MIN_VALUE), 0); // overflow
+		assertEquals(0, reverse(Integer.MIN_VALUE)); // overflow
 	}
 
 	@Test
 	public void testReverse5() {
-		assertEquals(reverse(123), 321);
+		assertEquals(321, reverse(123));
 	}
 	
 	@Test
 	public void testReverse6() {
-		assertEquals(reverse(1463847412), 2147483641);
+		assertEquals(2147483641, reverse(1463847412));
 	}
 
 	private int reverse(int input){

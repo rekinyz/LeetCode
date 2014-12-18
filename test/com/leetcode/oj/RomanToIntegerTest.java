@@ -10,82 +10,86 @@ public class RomanToIntegerTest {
 
 	@Test
 	public void testRomanToInt1() {
-		assertEquals(rti.romanToInt("I"), 1);
+		assertEquals(1, romanToInt("I"));
 	}
 
 	@Test
 	public void testRomanToInt2() {
-		assertEquals(rti.romanToInt("IV"), 4);
+		assertEquals(4, romanToInt("IV"));
 	}
 
 	@Test
 	public void testRomanToInt3() {
-		assertEquals(rti.romanToInt("VIII"), 8);
+		assertEquals(8, romanToInt("VIII"));
 	}
 
 	@Test
 	public void testRomanToInt4() {
-		assertEquals(rti.romanToInt("XII"), 12);
+		assertEquals(12, romanToInt("XII"));
 	}
 
 	@Test
 	public void testRomanToInt5() {
-		assertEquals(rti.romanToInt("XVI"), 16);
+		assertEquals(16, romanToInt("XVI"));
 	}
 
 	@Test
 	public void testRomanToInt6() {
-		assertEquals(rti.romanToInt("XIX"), 19);
+		assertEquals(19, romanToInt("XIX"));
 	}
 
 	@Test
 	public void testRomanToInt7() {
-		assertEquals(rti.romanToInt("XL"), 40);
+		assertEquals(40, romanToInt("XL"));
 	}
 
 	@Test
 	public void testRomanToInt8() {
-		assertEquals(rti.romanToInt("LXX"), 70);
+		assertEquals(70, romanToInt("LXX"));
 	}
 
 	@Test
 	public void testRomanToInt9() {
-		assertEquals(rti.romanToInt("XCIX"), 99);
+		assertEquals(99, romanToInt("XCIX"));
 	}
 
 	@Test
 	public void testRomanToInt10() {
-		assertEquals(rti.romanToInt("CXCIX"), 199);
+		assertEquals(199, romanToInt("CXCIX"));
 	}
 
 	@Test
 	public void testRomanToInt11() {
-		assertEquals(rti.romanToInt("CD"), 400);
+		assertEquals(400, romanToInt("CD"));
 	}
 
 	@Test
 	public void testRomanToInt12() {
-		assertEquals(rti.romanToInt("DCCC"), 800);
+		assertEquals(800, romanToInt("DCCC"));
 	}
 
 	@Test
 	public void testRomanToInt13() {
-		assertEquals(rti.romanToInt("MCD"), 1400);
+		assertEquals(1400, romanToInt("MCD"));
 	}
 
 	@Test
 	public void testRomanToInt14() {
-		assertEquals(rti.romanToInt("MCDXXXVII"), 1437);
+		assertEquals(1437, romanToInt("MCDXXXVII"));
 	}
 
 	@Test
 	public void testRomanToInt15() {
-		assertEquals(rti.romanToInt("MDCCCLXXX"), 1880);
+		assertEquals(1880, romanToInt("MDCCCLXXX"));
 	}
 
 	@Test
 	public void testRomanToInt16() {
-		assertEquals(rti.romanToInt("MMMCCCXXXIII"), 3333);
+		assertEquals(3333, romanToInt("MMMCCCXXXIII"));
+	}
+	
+	private int romanToInt(String input){
+		return rti.romanToInt(input);
 	}
 
 }

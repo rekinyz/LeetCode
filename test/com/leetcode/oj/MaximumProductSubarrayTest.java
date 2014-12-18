@@ -11,37 +11,37 @@ public class MaximumProductSubarrayTest {
 	@Test
 	public void testMaxProduct0() {
 		int[] num = { 2, 3, -2, 4 };
-		assertEquals(maxProduct(num), 6);
+		assertEquals(6, maxProduct(num));
 	}
 
 	@Test
 	public void testMaxProduct1() {
 		int[] num = { 2, 0 };
-		assertEquals(maxProduct(num), 2);
+		assertEquals(2, maxProduct(num));
 	}
 
 	@Test
 	public void testMaxProduct2() {
 		int[] num = { -2 };
-		assertEquals(maxProduct(num), -2);
+		assertEquals(-2, maxProduct(num));
 	}
 
 	@Test
 	public void testMaxProduct3() {
 		int[] num = { -2, 3, -4 };
-		assertEquals(maxProduct(num), 24);
+		assertEquals(24, maxProduct(num));
 	}
 
 	@Test
 	public void testMaxProduct4() {
 		int[] num = { 2, -5, -2, -4, 3 };
-		assertEquals(maxProduct(num), 24);
+		assertEquals(24, maxProduct(num));
 	}
 
 	@Test
 	public void testMaxProduct5() {
 		int[] num = { 3, -1, 4 };
-		assertEquals(maxProduct(num), 4);
+		assertEquals(4, maxProduct(num));
 	}
 
 	@Test
@@ -654,43 +654,43 @@ public class MaximumProductSubarrayTest {
 				1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, 1,
 				-1, 1, -1, -1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, -1, 1, -1,
 				1, 1, 1, 1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, 1, -1 };
-		assertEquals(maxProduct(num), 1492992000);
+		assertEquals(1492992000, maxProduct(num));
 	}
 
 	@Test
 	public void testMaxProduct7() {
 		int[] num = { -2, 0, -1 };
-		assertEquals(maxProduct(num), 0);
+		assertEquals(0, maxProduct(num));
 	}
 
 	@Test
 	public void testMaxProduct8() {
 		int[] num = { -5, 0, 2 };
-		assertEquals(maxProduct(num), 2);
+		assertEquals(2, maxProduct(num));
 	}
 
 	@Test
 	public void testMaxProduct9() {
 		int[] num = { 6, 3, -10, 0, 2 };
-		assertEquals(maxProduct(num), 18);
+		assertEquals(18, maxProduct(num));
 	}
 
 	@Test
 	public void testMaxProduct10() {
 		int[] num = { 1, -2, 3, -4, -3, -4, -3 };
-		assertEquals(maxProduct(num), 432);
+		assertEquals(432, maxProduct(num));
 	}
 
 	@Test
 	public void testMaxProduct11() {
 		int[] num = { -3, 0, 1, -2 };
-		assertEquals(maxProduct(num), 1);
+		assertEquals(1, maxProduct(num));
 	}
 
 	@Test
 	public void testMaxProduct12() {
 		int[] num = { -1, -2, -3, 0 };
-		assertEquals(maxProduct(num), 6);
+		assertEquals(6, maxProduct(num));
 	}
 	
 	private int maxProduct(int[] array){
