@@ -2,13 +2,20 @@ package com.leetcode.oj;
 
 import static org.junit.Assert.assertEquals;
 
+import org.junit.Before;
 import org.junit.Test;
 
 public class MinStackTest {
 
+	MinStack stack;
+	
+	@Before
+	public void setUp(){
+		stack = new MinStack();
+	}
+	
 	@Test
 	public void testGetMin1() {
-		MinStack stack = new MinStack();
 		stack.push(0);
 		stack.push(1);
 		stack.push(0);
@@ -19,14 +26,12 @@ public class MinStackTest {
 
 	@Test
 	public void testGetMin2() {
-		MinStack stack = new MinStack();
 		stack.push(-3);
 		assertEquals(-3, stack.getMin());
 	}
 
 	@Test
 	public void testGetMin3() {
-		MinStack stack = new MinStack();
 		stack.push(2);
 		stack.push(0);
 		stack.push(3);
@@ -42,7 +47,6 @@ public class MinStackTest {
 	
 	@Test
 	public void testGetMin4() {
-		MinStack stack = new MinStack();
 		stack.push(512);
 		stack.push(-1024);
 		stack.push(-1024);
