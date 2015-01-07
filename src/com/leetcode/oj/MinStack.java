@@ -1,5 +1,7 @@
 package com.leetcode.oj;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Stack;
 
 /**
@@ -17,17 +19,17 @@ import java.util.Stack;
  */
 public class MinStack {
 
-	private Stack<Integer> stack = new Stack<Integer>();
-	private Stack<Integer> min = new Stack<Integer>();
+	private List<Integer> stack = new ArrayList<Integer>();
+	private List<Integer> min = new ArrayList<Integer>();
 	
 	/**
 	 * Push element x onto stack
 	 * @param x
 	 */
 	public void push(int x) {
-		stack.push(x);
-		if(min.isEmpty() || min.peek() >= x){
-			min.push(x);
+		stack.add(x);
+		if(min.isEmpty() || min.get(min.size()-1) >= x){
+			min.add(x);
 		}
 	}
 
@@ -35,10 +37,10 @@ public class MinStack {
 	 * Removes the element on top of the stack.
 	 */
 	public void pop() {
-		if(min.peek().equals(stack.peek())){
-			min.pop();
+		if(getMin()==top()){
+			min.remove(min.size()-1);
 		}
-		stack.pop();
+		stack.remove(stack.size()-1);
 	}
 
 	/**
@@ -46,7 +48,7 @@ public class MinStack {
 	 * @return int element
 	 */
 	public int top() {
-		return stack.peek();
+		return stack.get(stack.size()-1);
 	}
 
 	/**
@@ -54,7 +56,7 @@ public class MinStack {
 	 * @return int element
 	 */
 	public int getMin() {
-		return min.peek();
+		return min.get(min.size()-1);
 	}
 	
 }
