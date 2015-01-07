@@ -8,12 +8,12 @@ import org.junit.Test;
 public class MinStackTest {
 
 	MinStack stack;
-	
+
 	@Before
-	public void setUp(){
+	public void setUp() {
 		stack = new MinStack();
 	}
-	
+
 	@Test
 	public void testGetMin1() {
 		stack.push(0);
@@ -44,7 +44,7 @@ public class MinStackTest {
 		stack.pop();
 		assertEquals(2, stack.getMin());
 	}
-	
+
 	@Test
 	public void testGetMin4() {
 		stack.push(512);
