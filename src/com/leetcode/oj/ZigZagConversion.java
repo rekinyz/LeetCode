@@ -30,13 +30,13 @@ public class ZigZagConversion {
 		if (nRows <= 1 || nRows >= len) {
 			return s;
 		}
-		String[] rows = new String[nRows];
+		StringBuffer[] rows = new StringBuffer[nRows];
 		int n = 0, step = 1;
 		for (int i = 0; i < len; i++) {
 			if (rows[n] == null) {
-				rows[n] = "";
+				rows[n] = new StringBuffer();
 			}
-			rows[n] += s.charAt(i);
+			rows[n].append(s.charAt(i));
 			if (n == 0) {
 				step = 1;
 			}
