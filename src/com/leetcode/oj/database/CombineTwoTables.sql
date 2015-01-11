@@ -1,4 +1,6 @@
 /*
+ Combine Two Tables
+  
  Table: Person
 +-------------+---------+
 | Column Name | Type    |
