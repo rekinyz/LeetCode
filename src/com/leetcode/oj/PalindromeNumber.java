@@ -23,6 +23,18 @@ package com.leetcode.oj;
 public class PalindromeNumber {
 
 	public boolean isPalindrome(int x) {
+		long reverse = 0;
+		int tmp = x;
+		while (tmp != 0) {
+			reverse *= 10;
+			reverse += tmp % 10;
+			tmp /= 10;
+		}
+		return reverse == Math.abs(x);
+	}
+
+	// extra space used
+	public boolean isPalindrome1(int x) {
 		if (x >= 0) {
 			String s = Integer.toString(x);
 			int tail = s.length() - 1;
