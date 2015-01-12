@@ -24,6 +24,19 @@ package com.leetcode.oj;
  */
 public class ReverseInteger {
 
+	public int reverse(int x) {
+		long result = 0;
+		while (x != 0) {
+			result *= 10;
+			result += x % 10;
+			x /= 10;
+		}
+		if (result > (1 << 31) - 1 || result < 1 << 31) {
+			return 0;
+		}
+		return (int) result;
+	}
+
 	public int reverse1(int x) {
 		String sign = "";
 		String s = String.valueOf(x);
@@ -47,7 +60,7 @@ public class ReverseInteger {
 		return result.intValue();
 	}
 
-	public int reverse(int x) {
+	public int reverse2(int x) {
 		String s = String.valueOf(Math.abs((long) x)); // x>0?x:-(long)x
 		int len = s.length();
 		StringBuilder sb = new StringBuilder(len);
