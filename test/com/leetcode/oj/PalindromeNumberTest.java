@@ -45,6 +45,12 @@ public class PalindromeNumberTest {
 		assertTrue(isPalindrome(x));
 	}
 
+	@Test
+	public void testIsPalindrome7() {
+		int x = (1 << 31) - 1;
+		assertFalse(isPalindrome(x));
+	}
+
 	private boolean isPalindrome(int x) {
 		return pn.isPalindrome(x);
 	}
