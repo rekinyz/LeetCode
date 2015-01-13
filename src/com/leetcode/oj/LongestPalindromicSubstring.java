@@ -11,8 +11,53 @@ package com.leetcode.oj;
  */
 public class LongestPalindromicSubstring {
 
+    /** O(N) Manacher Algorithm */
+    public String longestPalindrome(String s) {
+        // preprocess string
+        char[] str = preProcess(s).toCharArray();
+        int N = str.length;
+        int[] p = new int[N + 1];
+        int id = 0, mx = 0;
+        for (int i = 1; i < N - 1; i++) {
+            p[i] = mx > i ? Math.min(p[2 * id - i], mx - i) : 0;
+            while (str[i + 1 + p[i]] == str[i - 1 - p[i]])
+                p[i]++;
+            if (i + p[i] > mx) {
+                mx = i + p[i];
+                id = i;
+            }
+        }
+
+        // length of largest palindrome
+        int maxLen = 0;
+
+        // position of center of largest palindrome
+        int centerIndex = 0;
+        for (int i = 1; i < N - 1; i++) {
+            if (p[i] > maxLen) {
+                maxLen = p[i];
+                centerIndex = i;
+            }
+        }
+
+        // starting index of palindrome
+        int pos = (centerIndex - 1 - maxLen) / 2;
+        return s.substring(pos, pos + maxLen);
+    }
+
+    private String preProcess(String s) {
+        int len = s.length();
+        if (len == 0)
+            return "^$";
+        String str = "^";
+        for (int i = 0; i < len; i++)
+            str += "#" + s.charAt(i);
+        str += "#$";
+        return str;
+    }
+
 	// O(N²)
-	public String longestPalindrome(String s) {
+	public String longestPalindrome1(String s) {
 		int len = s.length();
 		int endIdx = 0;
 		int longest = 0;
@@ -30,7 +75,7 @@ public class LongestPalindromicSubstring {
 	}
 
 	// O(N³)
-	public String longestPalindrome1(String s) {
+	public String longestPalindrome2(String s) {
 		int len = s.length();
 		int longest = 0;
 		String res = "";
