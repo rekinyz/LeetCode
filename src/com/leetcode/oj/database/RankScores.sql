@@ -51,8 +51,9 @@ SELECT Score,
 FROM Scores, (SELECT @rank := 0, @prev := NULL) r
 ORDER BY Score DESC
 
-
-/* ranking with holes */
-SELECT Score, 1+(SELECT count(*) from Scores a WHERE a.Score > b.Score) AS Rank
-FROM Scores b
-ORDER BY Score DESC 
+/*another solution*/
+SELECT Scores.Score, COUNT(Ranking.Score) AS RANK
+FROM Scores, ( SELECT DISTINCT Score FROM Scores ) Ranking
+WHERE Scores.Score <= Ranking.Score
+GROUP BY Scores.Id, Scores.Score
+ORDER BY Scores.Score DESC;
