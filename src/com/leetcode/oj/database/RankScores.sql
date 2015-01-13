@@ -43,11 +43,11 @@ INSERT INTO Scores (id, Score) VALUES
 
 /* Dense Rank */
 SELECT Score,   
-  CASE
-	WHEN @prev = Score THEN @rank
-    WHEN @prev := Score THEN @rank := @rank + 1
-    WHEN @rank := @rank + 1 THEN @rank
-  END AS Rank
+	CASE
+		WHEN @prev = Score THEN @rank
+	    WHEN @prev := Score THEN @rank := @rank + 1
+	    WHEN @rank := @rank + 1 THEN @rank
+  	END AS Rank
 FROM Scores, (SELECT @rank := 0, @prev := NULL) r
 ORDER BY Score DESC
 
