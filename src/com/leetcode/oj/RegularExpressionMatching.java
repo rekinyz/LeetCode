@@ -1,6 +1,5 @@
 package com.leetcode.oj;
 
-
 /**
  * Regular Expression Matching
  * 
@@ -25,24 +24,19 @@ package com.leetcode.oj;
 public class RegularExpressionMatching {
 
 	public boolean isMatch(String s, String p) {
-		if (p.contains(".")||p.contains("*")){
-			int sLen = s.length(), pLen = p.length();
-			if (pLen == 1 || p.charAt(1) != '*') {
-				if (sLen < 1 || (p.charAt(0) != '.' && s.charAt(0) != p.charAt(0))){
-					return false;
-				}
-				return isMatch(s.substring(1), p.substring(1));
-			} else {
-				int i = -1;
-				while (i < sLen && (i < 0 || p.charAt(0) == '.' || p.charAt(0) == s.charAt(i))) {
-					if (isMatch(s.substring(i + 1), p.substring(2)))
-						return true;
-					i++;
-				}
-				return false;
+		if (p.contains(".") || p.contains("*")) {
+			if (p.length() == 1 || p.charAt(1) != '*')
+				return comp(s, p, s.length(), 0) && isMatch(s.substring(1), p.substring(1));
+			for (int i = 0; i == 0 || comp(s, p, s.length(), i - 1); i++) {
+				if (isMatch(s.substring(i), p.substring(2)))
+					return true;
 			}
 		}
 		return s.equals(p);
 	}
-	
+
+	private boolean comp(String s, String p, int sLen, int i) {
+		return sLen > i && (p.charAt(0) == s.charAt(i) || p.charAt(0) == '.');
+	}
+
 }
