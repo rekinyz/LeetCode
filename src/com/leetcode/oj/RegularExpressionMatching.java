@@ -23,26 +23,26 @@ package com.leetcode.oj;
  * @author rekinyz
  */
 public class RegularExpressionMatching {
-	
+
 	public boolean isMatch(String s, String p) {
-		int sLen = s.length(), pLen = p.length();
-		int i=0, j=0;
-		if(s.equals(p) || p.equals(".*")){
-			return true;
-		}
-		if(i<sLen && j<pLen){
-			if(sLen>0 && pLen>2 && p.contains("*")){
-				return isMatch(s, p.substring(2)) || compareChar(s.charAt(i), p.charAt(j)) && isMatch(s.substring(1), p);
-			}else if(sLen!=pLen){
+		if (p.contains(".")||p.contains("*")){
+			int sLen = s.length(), pLen = p.length();
+			if (pLen == 1 || p.charAt(1) != '*') {
+				if (sLen < 1 || (p.charAt(0) != '.' && s.charAt(0) != p.charAt(0))){
+					return false;
+				}
+				return isMatch(s.substring(1), p.substring(1));
+			} else {
+				int i = -1;
+				while (i < sLen && (i < 0 || p.charAt(0) == '.' || p.charAt(0) == s.charAt(i))) {
+					if (isMatch(s.substring(i + 1), p.substring(2)))
+						return true;
+					i++;
+				}
 				return false;
 			}
-			return compareChar(s.charAt(i++), p.charAt(j++));
 		}
-		return false;
+		return s.equals(p);
 	}
-	
-	private boolean compareChar(char a, char b) {
-        return (a==b || b=='.');
-    }
 	
 }
