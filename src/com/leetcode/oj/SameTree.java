@@ -30,8 +30,7 @@ public class SameTree {
 
 		Integer[] input1 = { 1, -2, -3, 1, 3, -2, null, -1 };
 		Integer[] input2 = { -2, null, -3 };
-		Integer[] input3 = { 5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null,
-				1 };
+		Integer[] input3 = { 5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, 1 };
 		Integer[] input4 = { 5, 4, 8, 11, null, 13, 4, 7, 2, null, null, 5, 1 };
 		Integer[] input5 = { 0 };
 		Integer[] input6 = { 0 };
