@@ -64,3 +64,8 @@ SELECT d.Name AS Department, e.Name AS Employee, e.Salary
 FROM Employee e, Department d, (SELECT DepartmentId, MAX(Salary) AS maxSalary FROM Employee GROUP BY DepartmentId) r
 WHERE e.DepartmentId = r.DepartmentId AND e.Salary = r.maxSalary AND e.DepartmentId = d.id
 
+/*Solution 4: inspired by the Department Top Three Salaries*/
+SELECT d.Name AS Department, e.Name AS Employee, e.Salary AS Salary 
+FROM Employee e JOIN Department d ON e.DepartmentId = d.Id AND
+ (SELECT COUNT(DISTINCT Salary) FROM Employee WHERE DepartmentId = e.DepartmentId AND Salary > e.Salary) < 1
+ORDER BY e.DepartmentId, e.Salary DESC;
