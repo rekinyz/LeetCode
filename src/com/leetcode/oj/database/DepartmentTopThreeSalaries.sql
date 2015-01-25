@@ -36,7 +36,7 @@ Write a SQL query to find employees who earn the top three salaries in each of t
 +------------+----------+--------+
 */
 
-/* http://www.sqlfiddle.com/#!2/e87e7/14 */
+/* http://www.sqlfiddle.com/#!2/e87e7/15 */
 CREATE TABLE Employee(id INT, Name CHAR(30), Salary INT, DepartmentId INT);
 INSERT INTO Employee (id, Name, Salary, DepartmentId) VALUES
 (1, 'Joe',70000, 1),
@@ -54,6 +54,6 @@ INSERT INTO Department (id, Name) VALUES
 /*Solution*/
 SELECT d.Name AS Department, e.Name AS Employee, e.Salary AS Salary 
 FROM Employee e JOIN Department d ON e.DepartmentId = d.Id AND
- (SELECT COUNT(DISTINCT(Salary)) FROM Employee WHERE DepartmentId = e.DepartmentId AND Salary > e.Salary) < 3
+ (SELECT COUNT(DISTINCT Salary) FROM Employee WHERE DepartmentId = e.DepartmentId AND Salary > e.Salary) < 3
 ORDER BY e.DepartmentId, e.Salary DESC;
 
