@@ -40,12 +40,18 @@ public class ContainerWithMostWaterTest {
 
 	@Test
 	public void testMaxArea6() {
-		int[] height = { 1, 1, 1, 1, 2, 1, 1, 1, 1 };
+		int[] height = { 1, 1, 1, 1, 2, 1, 1, 1, 1 }; // 1*8
 		assertEquals(8, maxArea(height));
 	}
 
 	@Test
 	public void testMaxArea7() {
+		int[] height = { 1, 1, 1, 9, 9, 1, 1, 1, 1 }; // 1*9
+		assertEquals(9, maxArea(height));
+	}
+
+	@Test
+	public void testMaxArea8() {
 		int[] height = { 76, 155, 15, 188, 180, 154, 84, 34, 187, 142, 22, 5,
 				27, 183, 111, 128, 50, 58, 2, 112, 179, 2, 100, 111, 115, 76,
 				134, 120, 118, 103, 31, 146, 58, 198, 134, 38, 104, 170, 25,
