@@ -1,8 +1,7 @@
 package com.leetcode.oj;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
+import java.util.LinkedList;
 import java.util.Map;
 import java.util.Stack;
 
@@ -28,12 +27,25 @@ public class ValidParentheses {
 
 	public boolean isValid(String s) {
 		Stack<Character> stack = new Stack<Character>();
-		for (int i = 0; i < s.length(); i++) {
-			Character c = Character.valueOf(s.charAt(i));
+		for (char ca : s.toCharArray()) {
+			Character c = Character.valueOf(ca);
 			if (stack.isEmpty() || !c.equals(pair.get(stack.peek()))) {
 				stack.push(c);
 			} else {
 				stack.pop();
+			}
+		}
+		return stack.isEmpty();
+	}
+
+	public boolean isValid1(String s) {
+		LinkedList<Character> stack = new LinkedList<Character>();
+		for (char ca : s.toCharArray()) {
+			Character c = Character.valueOf(ca);
+			if (stack.isEmpty() || !c.equals(pair.get(stack.getLast()))) {
+				stack.addLast(c);
+			} else {
+				stack.removeLast();
 			}
 		}
 		return stack.isEmpty();
