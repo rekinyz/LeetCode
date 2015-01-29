@@ -15,12 +15,8 @@ import java.util.Map;
  */
 public class RomanToInteger {
 
-	public int romanToInt(String s) {
-		// validation of the roman numeral
-		if (!s.matches("^M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$")) {
-			return 0;
-		}
-		Map<Character, Integer> map = new HashMap<Character, Integer>();
+	private static final Map<Character, Integer> map = new HashMap<Character, Integer>(7);
+	static {
 		map.put('I', 1);
 		map.put('V', 5);
 		map.put('X', 10);
@@ -28,7 +24,13 @@ public class RomanToInteger {
 		map.put('C', 100);
 		map.put('D', 500);
 		map.put('M', 1000);
-
+	}
+	
+	public int romanToInt(String s) {
+		// validation of the roman numeral
+		if (!s.matches("^M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$")) {
+			return 0;
+		}
 		int sum = 0;
 		int len = s.length() - 1;
 		for (int i = 0; i < len; i++) {
