@@ -14,10 +14,9 @@ import java.util.TreeMap;
  * @author rekinyz
  */
 public class IntegerToRoman {
-
-	public String intToRoman(int num) {
-		StringBuilder roman = new StringBuilder("");
-		TreeMap<Integer, String> map = new TreeMap<Integer, String>(Collections.reverseOrder());
+	
+	private static final TreeMap<Integer, String> map = new TreeMap<Integer, String>(Collections.reverseOrder());
+	static {
 		map.put(1000, "M");
 		map.put(900, "CM");
 		map.put(500, "D");
@@ -31,6 +30,10 @@ public class IntegerToRoman {
 		map.put(5, "V");
 		map.put(4, "IV");
 		map.put(1, "I");
+	}
+	
+	public String intToRoman(int num) {
+		StringBuilder roman = new StringBuilder("");
 		for (Integer i: map.keySet()) {
 			for (int j = 1; j <= num / i; j++) {
 				roman.append(map.get(i));
