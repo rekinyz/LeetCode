@@ -25,8 +25,29 @@ import java.util.Set;
  */
 public class ThreeSum {
 
-	// O(N²) but performance not good enough, can be improved!
+	// O(N²) 2-3 times faster than former one!
 	public List<List<Integer>> threeSum(int[] num) {
+		int len = num.length;
+		Arrays.sort(num);
+		Set<List<Integer>> set = new HashSet<List<Integer>>();
+		for (int i = 0; i < len - 2; i++) {
+			for (int j = i + 1, k = len - 1; j < k;) {
+				if (num[i] + num[j] + num[k] < 0) {
+					j++;
+				} else if (num[i] + num[j] + num[k] > 0) {
+					k--;
+				} else {
+					List<Integer> l = Arrays.asList(num[i], num[j], num[k]);
+					set.add(l);
+					j++;
+				}
+			}
+		}
+		return new ArrayList<List<Integer>>(set);
+	}
+
+	// O(N²) performance still not good enough
+	public List<List<Integer>> threeSum1(int[] num) {
 		int len = num.length;
 		Set<List<Integer>> set = new HashSet<List<Integer>>();
 		Map<Integer, Integer> map = new HashMap<Integer, Integer>(len);
@@ -49,7 +70,7 @@ public class ThreeSum {
 	}
 
 	// O(N²logN)
-	public List<List<Integer>> threeSum1(int[] num) {
+	public List<List<Integer>> threeSum2(int[] num) {
 		int len = num.length;
 		Arrays.sort(num);
 		Set<List<Integer>> set = new HashSet<List<Integer>>();
@@ -67,7 +88,7 @@ public class ThreeSum {
 	}
 
 	// O(N³)
-	public List<List<Integer>> threeSum2(int[] num) {
+	public List<List<Integer>> threeSum3(int[] num) {
 		int len = num.length;
 		Set<List<Integer>> set = new HashSet<List<Integer>>();
 		for (int i = 0; i < len - 2; i++) {
