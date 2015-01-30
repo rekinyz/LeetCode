@@ -212,9 +212,21 @@ public class ThreeSumTest {
 
 		assertEquals(expectedList, resList);
 	}
+	
+	@Test
+	public void testThreeSum5() {
+		int[] num = {};
+
+		List<List<Integer>> expectedList = Arrays.asList();
+		Collections.sort(expectedList, comp);
+		List<List<Integer>> resList = threeSum(num);
+		Collections.sort(resList, comp);
+
+		assertEquals(expectedList, resList);
+	}
 
 	private List<List<Integer>> threeSum(int[] num) {
-		return ts.threeSum(num);
+		return ts.threeSum2(num);
 	}
 
 }
