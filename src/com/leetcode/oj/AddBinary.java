@@ -5,7 +5,7 @@ package com.leetcode.oj;
  * 
  * For example, a = "11" b = "1" Return "100".
  * 
- * @author z001raxe
+ * @author rekinyz
  *
  */
 public class AddBinary {

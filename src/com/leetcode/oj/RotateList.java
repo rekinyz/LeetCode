@@ -10,7 +10,7 @@ import com.leetcode.oj.util.ListNode;
  * 
  * For example: Given 1->2->3->4->5->NULL and k = 2, return 4->5->1->2->3->NULL.
  * 
- * @author z001raxe
+ * @author rekinyz
  *
  */
 public class RotateList {

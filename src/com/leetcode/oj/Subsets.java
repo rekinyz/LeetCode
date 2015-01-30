@@ -16,7 +16,7 @@ import java.util.List;
  * 
  * [ [3], [1], [2], [1,2,3], [1,3], [2,3], [1,2], [] ]
  * 
- * @author z001raxe
+ * @author rekinyz
  *
  */
 public class Subsets {

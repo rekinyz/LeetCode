@@ -11,7 +11,7 @@ package com.leetcode.oj;
  * 
  * Note: The sequence of integers will be represented as a string.
  * 
- * @author z001raxe
+ * @author rekinyz
  *
  */
 public class CountAndSay {

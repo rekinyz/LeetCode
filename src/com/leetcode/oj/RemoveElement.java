@@ -7,7 +7,7 @@ package com.leetcode.oj;
  * The order of elements can be changed. It doesn't matter what you leave beyond
  * the new length.
  * 
- * @author z001raxe
+ * @author rekinyz
  *
  */
 public class RemoveElement {

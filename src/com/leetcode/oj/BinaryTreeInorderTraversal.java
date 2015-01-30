@@ -23,7 +23,7 @@ import com.leetcode.oj.util.TreeNode;
  *
  * Note: Recursive solution is trivial, could you do it iteratively?
  *
- * @author z001raxe
+ * @author rekinyz
  *
  */
 public class BinaryTreeInorderTraversal {

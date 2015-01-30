@@ -13,7 +13,7 @@ package com.leetcode.oj;
  * 
  * Your function should return length = 2, and A is now [1,2].
  * 
- * @author z001raxe
+ * @author rekinyz
  *
  */
 public class RemoveDuplicatesFromSortedArray {
