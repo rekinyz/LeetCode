@@ -27,10 +27,10 @@ public class TwoSum {
 			map.put(numbers[i], i);
 		}
 		for (int i = 0; i < len; i++) {
-			if (map.get(target - numbers[i]) != null
-					&& map.get(target - numbers[i]) != i) {
+			int diff = target - numbers[i];
+			if (map.containsKey(diff) && map.get(diff) != i) {
 				result[0] = i + 1;
-				result[1] = map.get(target - numbers[i]) + 1;
+				result[1] = map.get(diff) + 1;
 				return result;
 			}
 		}
