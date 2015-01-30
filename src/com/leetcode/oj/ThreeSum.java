@@ -49,29 +49,6 @@ public class ThreeSum {
 		return new ArrayList<List<Integer>>(set);
 	}
 
-	// O(N²)
-	public List<List<Integer>> threeSum1(int[] num) {
-		int len = num.length;
-		Set<List<Integer>> set = new HashSet<List<Integer>>();
-		Map<Integer, Integer> map = new HashMap<Integer, Integer>(len);
-		for (int i = 0; i < len; i++) {
-			map.put(num[i], i);
-		}
-		for (int i = 0; i < len - 1; i++) {
-			for (int j = i + 1; j < len; j++) {
-				if (map.containsKey(0 - num[i] - num[j])) {
-					int k = map.get(0 - num[i] - num[j]);
-					if (k != i && k != j) {
-						List<Integer> l = Arrays.asList(num[i], num[j], num[k]);
-						Collections.sort(l);
-						set.add(l);
-					}
-				}
-			}
-		}
-		return new ArrayList<List<Integer>>(set);
-	}
-
 	// O(N³)
 	public List<List<Integer>> threeSum2(int[] num) {
 		int len = num.length;
