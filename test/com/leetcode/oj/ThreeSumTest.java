@@ -20,7 +20,7 @@ public class ThreeSumTest {
 				while (o1.get(i) == o2.get(i)) {
 					i++;
 				}
-				return o1.get(i).compareTo( o2.get(i));
+				return o1.get(i).compareTo(o2.get(i));
 			}
 			return 0;
 		}
@@ -212,7 +212,7 @@ public class ThreeSumTest {
 
 		assertEquals(expectedList, resList);
 	}
-	
+
 	@Test
 	public void testThreeSum5() {
 		int[] num = {};
