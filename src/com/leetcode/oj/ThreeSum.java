@@ -26,7 +26,7 @@ import java.util.Set;
 public class ThreeSum {
 
 	// O(N²) but performance not good enough, can be improved!
-	public List<List<Integer>> threeSum1(int[] num) {
+	public List<List<Integer>> threeSum(int[] num) {
 		int len = num.length;
 		Set<List<Integer>> set = new HashSet<List<Integer>>();
 		Map<Integer, Integer> map = new HashMap<Integer, Integer>(len);
@@ -49,7 +49,7 @@ public class ThreeSum {
 	}
 
 	// O(N²logN)
-	public List<List<Integer>> threeSum(int[] num) {
+	public List<List<Integer>> threeSum1(int[] num) {
 		int len = num.length;
 		Arrays.sort(num);
 		Set<List<Integer>> set = new HashSet<List<Integer>>();
