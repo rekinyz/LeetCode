@@ -13,7 +13,7 @@ public class ThreeSumTest {
 
 	ThreeSum ts = new ThreeSum();
 
-	Comparator<List<Integer>> comp = new Comparator<List<Integer>>() {
+	private static final Comparator<List<Integer>> comp = new Comparator<List<Integer>>() {
 		public int compare(List<Integer> o1, List<Integer> o2) {
 			if (o1 != null && o2 != null) {
 				int i = 0;
