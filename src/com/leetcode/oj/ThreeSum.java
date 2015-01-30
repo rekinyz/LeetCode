@@ -25,7 +25,7 @@ import java.util.Set;
  */
 public class ThreeSum {
 
-	// O(N²) 2-3 times faster than former one!
+	// O(N²) much faster than former one!
 	public List<List<Integer>> threeSum(int[] num) {
 		int len = num.length;
 		Arrays.sort(num);
@@ -40,6 +40,7 @@ public class ThreeSum {
 					List<Integer> l = Arrays.asList(num[i], num[j], num[k]);
 					set.add(l);
 					j++;
+					k--;
 				}
 			}
 		}
