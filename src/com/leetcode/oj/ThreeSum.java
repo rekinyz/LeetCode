@@ -26,15 +26,15 @@ import java.util.Set;
 public class ThreeSum {
 
 	// O(N²) but performance not good enough, can be improved!
-	public List<List<Integer>> threeSum(int[] num) {
+	public List<List<Integer>> threeSum1(int[] num) {
 		int len = num.length;
 		Set<List<Integer>> set = new HashSet<List<Integer>>();
 		Map<Integer, Integer> map = new HashMap<Integer, Integer>(len);
 		for (int i = 0; i < len; i++) {
 			map.put(num[i], i);
 		}
-		for (int i = 0; i < len - 1; i++) {
-			for (int j = i + 1; j < len; j++) {
+		for (int i = 0; i < len - 2; i++) {
+			for (int j = i + 1; j < len - 1; j++) {
 				if (map.containsKey(0 - num[i] - num[j])) {
 					int k = map.get(0 - num[i] - num[j]);
 					if (k != i && k != j) {
@@ -42,6 +42,24 @@ public class ThreeSum {
 						Collections.sort(l);
 						set.add(l);
 					}
+				}
+			}
+		}
+		return new ArrayList<List<Integer>>(set);
+	}
+
+	// O(N²logN)
+	public List<List<Integer>> threeSum(int[] num) {
+		int len = num.length;
+		Arrays.sort(num);
+		Set<List<Integer>> set = new HashSet<List<Integer>>();
+		for (int i = 0; i < len - 2; i++) {
+			for (int j = i + 1; j < len - 1; j++) {
+				int k = Arrays.binarySearch(num, 0 - num[i] - num[j]);
+				if (k > 0 && k != i && k != j) {
+					List<Integer> l = Arrays.asList(num[i], num[j], num[k]);
+					Collections.sort(l);
+					set.add(l);
 				}
 			}
 		}
