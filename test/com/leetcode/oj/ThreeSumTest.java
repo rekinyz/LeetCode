@@ -226,7 +226,7 @@ public class ThreeSumTest {
 	}
 
 	private List<List<Integer>> threeSum(int[] num) {
-		return ts.threeSum2(num);
+		return ts.threeSum(num);
 	}
 
 }
