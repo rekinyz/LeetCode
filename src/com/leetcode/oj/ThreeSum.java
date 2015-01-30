@@ -25,11 +25,38 @@ import java.util.Set;
  */
 public class ThreeSum {
 
-	// O(N²) much faster than former one!
+	// O(N²) the fastest one, removed the duplicates without using Set
 	public List<List<Integer>> threeSum(int[] num) {
 		int len = num.length;
 		Arrays.sort(num);
-		Set<List<Integer>> set = new HashSet<List<Integer>>();
+		List<List<Integer>> res = new ArrayList<>();
+		for (int i = 0; i < len - 2; i++) {
+			if (i == 0 || (i > 0 && num[i] != num[i - 1])) {
+				for (int j = i + 1, k = len - 1; j < k;) {
+					if (num[i] + num[j] + num[k] < 0) {
+						j++;
+					} else if (num[i] + num[j] + num[k] > 0) {
+						k--;
+					} else {
+						res.add(Arrays.asList(num[i], num[j], num[k]));
+						while (j < k && num[j] == num[j + 1])
+							j++;
+						while (j < k && num[k] == num[k - 1])
+							k--;
+						j++;
+						k--;
+					}
+				}
+			}
+		}
+		return res;
+	}
+	
+	// O(N²) faster than former one!
+	public List<List<Integer>> threeSum1(int[] num) {
+		int len = num.length;
+		Arrays.sort(num);
+		Set<List<Integer>> set = new HashSet<>();
 		for (int i = 0; i < len - 2; i++) {
 			for (int j = i + 1, k = len - 1; j < k;) {
 				if (num[i] + num[j] + num[k] < 0) {
@@ -37,8 +64,7 @@ public class ThreeSum {
 				} else if (num[i] + num[j] + num[k] > 0) {
 					k--;
 				} else {
-					List<Integer> l = Arrays.asList(num[i], num[j], num[k]);
-					set.add(l);
+					set.add(Arrays.asList(num[i], num[j], num[k]));
 					j++;
 					k--;
 				}
@@ -48,10 +74,10 @@ public class ThreeSum {
 	}
 
 	// O(N²) performance still not good enough
-	public List<List<Integer>> threeSum1(int[] num) {
+	public List<List<Integer>> threeSum2(int[] num) {
 		int len = num.length;
-		Set<List<Integer>> set = new HashSet<List<Integer>>();
-		Map<Integer, Integer> map = new HashMap<Integer, Integer>(len);
+		Set<List<Integer>> set = new HashSet<>();
+		Map<Integer, Integer> map = new HashMap<>(len);
 		for (int i = 0; i < len; i++) {
 			map.put(num[i], i);
 		}
@@ -71,10 +97,10 @@ public class ThreeSum {
 	}
 
 	// O(N²logN)
-	public List<List<Integer>> threeSum2(int[] num) {
+	public List<List<Integer>> threeSum3(int[] num) {
 		int len = num.length;
 		Arrays.sort(num);
-		Set<List<Integer>> set = new HashSet<List<Integer>>();
+		Set<List<Integer>> set = new HashSet<>();
 		for (int i = 0; i < len - 2; i++) {
 			for (int j = i + 1; j < len - 1; j++) {
 				int k = Arrays.binarySearch(num, 0 - num[i] - num[j]);
@@ -89,9 +115,9 @@ public class ThreeSum {
 	}
 
 	// O(N³)
-	public List<List<Integer>> threeSum3(int[] num) {
+	public List<List<Integer>> threeSum4(int[] num) {
 		int len = num.length;
-		Set<List<Integer>> set = new HashSet<List<Integer>>();
+		Set<List<Integer>> set = new HashSet<>();
 		for (int i = 0; i < len - 2; i++) {
 			for (int j = i + 1; j < len - 1; j++) {
 				for (int k = j + 1; k < len; k++) {
