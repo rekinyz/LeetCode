@@ -14,13 +14,13 @@ public class ThreeSumTest {
 	ThreeSum ts = new ThreeSum();
 
 	Comparator<List<Integer>> comp = new Comparator<List<Integer>>() {
-
 		public int compare(List<Integer> o1, List<Integer> o2) {
 			if (o1 != null && o2 != null) {
-				Integer var1 = o1.get(0);
-				Integer var2 = o2.get(0);
-
-				return var1.compareTo(var2);
+				int i = 0;
+				while (o1.get(i) == o2.get(i)) {
+					i++;
+				}
+				return o1.get(i).compareTo( o2.get(i));
 			}
 			return 0;
 		}
@@ -31,12 +31,12 @@ public class ThreeSumTest {
 		int[] num = { -1, 0, 1, 2, -1, -4 };
 		List<Integer> l1 = Arrays.asList(-1, 0, 1);
 		List<Integer> l2 = Arrays.asList(-1, -1, 2);
-		
+
 		List<List<Integer>> expectedList = Arrays.asList(l1, l2);
 		Collections.sort(expectedList, comp);
 		List<List<Integer>> resList = threeSum(num);
 		Collections.sort(resList, comp);
-		
+
 		assertEquals(expectedList, resList);
 	}
 
@@ -44,12 +44,12 @@ public class ThreeSumTest {
 	public void testThreeSum2() {
 		int[] num = { -1, 2, 0, 1 };
 		List<Integer> l1 = Arrays.asList(-1, 0, 1);
-		
+
 		List<List<Integer>> expectedList = Arrays.asList(l1);
 		Collections.sort(expectedList, comp);
 		List<List<Integer>> resList = threeSum(num);
 		Collections.sort(resList, comp);
-		
+
 		assertEquals(expectedList, resList);
 	}
 
@@ -57,12 +57,12 @@ public class ThreeSumTest {
 	public void testThreeSum3() {
 		int[] num = { -1, -4, 1, 2, -1 };
 		List<Integer> l1 = Arrays.asList(-1, -1, 2);
-		
+
 		List<List<Integer>> expectedList = Arrays.asList(l1);
 		Collections.sort(expectedList, comp);
 		List<List<Integer>> resList = threeSum(num);
 		Collections.sort(resList, comp);
-		
+
 		assertEquals(expectedList, resList);
 	}
 
@@ -209,7 +209,7 @@ public class ThreeSumTest {
 		Collections.sort(expectedList, comp);
 		List<List<Integer>> resList = threeSum(num);
 		Collections.sort(resList, comp);
-		
+
 		assertEquals(expectedList, resList);
 	}
 
