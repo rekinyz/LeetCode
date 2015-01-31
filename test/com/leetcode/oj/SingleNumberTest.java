@@ -2,9 +2,9 @@ package com.leetcode.oj;
 
 import static org.junit.Assert.assertEquals;
 
-import java.util.Random;
-
 import org.junit.Test;
+
+import com.leetcode.oj.util.Shuffle;
 
 public class SingleNumberTest {
 
@@ -66,19 +66,8 @@ public class SingleNumberTest {
 			res[i] = j;
 		}
 		res[2 * n] = n;
-		shuffleArray(res);
+		Shuffle.shuffleArray(res);
 		return res;
-	}
-
-	// Implementing Fisher–Yates shuffle
-	private void shuffleArray(int[] ar) {
-		Random rnd = new Random();
-		for (int i = ar.length - 1; i > 0; i--) {
-			int index = rnd.nextInt(i + 1);
-			int a = ar[index];
-			ar[index] = ar[i];
-			ar[i] = a;
-		}
 	}
 
 	private int singleNumber(int[] A) {

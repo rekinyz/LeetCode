@@ -8,7 +8,7 @@ import java.util.Random;
  * @author rekinyz
  * @param <T>
  */
-public class Shuffle<T> {
+public class Shuffle {
 	
 	public static <T> void shuffleArray(T[] ar) {
 		Random rnd = new Random();
