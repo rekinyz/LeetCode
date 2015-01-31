@@ -129,7 +129,6 @@ public class ThreeSumTest {
 		List<Integer> l52 = Arrays.asList(-12, 2, 10);
 		List<Integer> l53 = Arrays.asList(-7, -7, 14);
 		List<Integer> l54 = Arrays.asList(-7, 3, 4);
-		List<Integer> l119 = Arrays.asList(-1, -1, 2);
 		List<Integer> l55 = Arrays.asList(-1, 0, 1);
 		List<Integer> l56 = Arrays.asList(-10, 2, 8);
 		List<Integer> l57 = Arrays.asList(-9, 3, 6);
@@ -194,6 +193,7 @@ public class ThreeSumTest {
 		List<Integer> l116 = Arrays.asList(-14, 5, 9);
 		List<Integer> l117 = Arrays.asList(-11, -3, 14);
 		List<Integer> l118 = Arrays.asList(-13, 5, 8);
+		List<Integer> l119 = Arrays.asList(-1, -1, 2);
 
 		List<List<Integer>> expectedList = Arrays.asList(l1, l2, l3, l4, l5,
 				l6, l7, l8, l9, l10, l11, l12, l13, l14, l15, l16, l17, l18,
@@ -226,7 +226,7 @@ public class ThreeSumTest {
 	}
 
 	private List<List<Integer>> threeSum(int[] num) {
-		return ts.threeSum(num);
+		return ts.threeSum1(num);
 	}
 
 }
