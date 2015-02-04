@@ -51,6 +51,16 @@ public class LetterCombinationsOfAPhoneNumberTest {
 		assertEquals(expected, result);
 	}
 
+	@Test
+	public void testletterCombinations5() {
+		String digits = "27";
+		List<String> expected = Arrays.asList("ap", "aq", "ar", "as", "bp",
+				"bq", "br", "bs", "cp", "cq", "cr", "cs");
+		List<String> result = letterCombinations(digits);
+		Collections.sort(result);
+		assertEquals(expected, result);
+	}
+
 	private List<String> letterCombinations(String digits) {
 		return lcn.letterCombinations(digits);
 	}
