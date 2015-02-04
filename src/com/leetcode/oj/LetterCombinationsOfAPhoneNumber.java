@@ -50,12 +50,12 @@ public class LetterCombinationsOfAPhoneNumber {
 	}
 
 	private void combination(String prefix, String digits, int idx, List<String> res) {
-		if (idx >= digits.length()) {
-			res.add(prefix);
-		} else {
+		if (idx < digits.length()) {
 			for (char letter : LETTERS[digits.charAt(idx) - '0'].toCharArray()) {
 				combination(prefix + letter, digits, idx+1, res);
 			}
+		}else{
+			res.add(prefix);
 		}
 	}
 
