@@ -74,14 +74,21 @@ public class ImplementStrStrTest {
 	@Test
 	public void testStrStr10() {
 		String haystack = "aaa";
-		String needle = "aaaa";
-		assertEquals(-1, strStr(haystack, needle));
+		String needle = "aaa";
+		assertEquals(0, strStr(haystack, needle));
 	}
 	
 	@Test
 	public void testStrStr11() {
 		String haystack = "mississippi";
 		String needle = "mississippi";
+		assertEquals(0, strStr(haystack, needle));
+	}
+	
+	@Test
+	public void testStrStr12() {
+		String haystack = "aaabbcabbcaaa";
+		String needle = "aaabbcabbc";
 		assertEquals(0, strStr(haystack, needle));
 	}
 	
