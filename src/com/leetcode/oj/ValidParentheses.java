@@ -1,9 +1,10 @@
 package com.leetcode.oj;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
-import java.util.Stack;
 
 /**
  * Valid Parentheses
@@ -26,7 +27,7 @@ public class ValidParentheses {
 	}
 
 	public boolean isValid(String s) {
-		Stack<Character> stack = new Stack<Character>();
+		Deque<Character> stack = new ArrayDeque<Character>();
 		for (char ca : s.toCharArray()) {
 			Character c = Character.valueOf(ca);
 			if (stack.isEmpty() || !c.equals(pair.get(stack.peek()))) {
