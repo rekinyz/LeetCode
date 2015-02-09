@@ -127,6 +127,13 @@ public class ImplementStrStrTest {
 		assertEquals(0, strStr(haystack, needle));
 	}
 	
+	@Test
+	public void testStrStr18() {
+		String haystack = "";
+		String needle = "";
+		assertEquals(0, strStr(haystack, needle));
+	}
+	
 	private int strStr(String haystack, String needle) {
 		return iss.strStr(haystack, needle);
 	}
