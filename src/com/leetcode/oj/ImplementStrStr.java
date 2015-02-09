@@ -9,19 +9,19 @@ package com.leetcode.oj;
  * @author rekinyz
  */
 public class ImplementStrStr {
-	
+
 	public int strStr(String haystack, String needle) {
-        int hLen = haystack.length(), nLen = needle.length();
-        for(int i = 0; i <= hLen-nLen; i++){
-            int j = 0;
-            for(; j<nLen; j++){
-                if(needle.charAt(j)!=haystack.charAt(i+j))
-                    break;
-            }
-            if(j == nLen)
-                return i;
-        }
-        return -1;
-    }
+		int hLen = haystack.length(), nLen = needle.length();
+		for (int i = 0; i <= hLen - nLen; i++) {
+			int j = 0;
+			for (; j < nLen; j++) {
+				if (needle.charAt(j) != haystack.charAt(i + j))
+					break;
+			}
+			if (j == nLen)
+				return i;
+		}
+		return -1;
+	}
 
 }
