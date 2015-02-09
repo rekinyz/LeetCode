@@ -11,16 +11,16 @@ package com.leetcode.oj;
 public class ImplementStrStr {
 
 	public int strStr(String haystack, String needle) {
-		int i = 0;
-		int res = needle.isEmpty() ? 0 : haystack.indexOf(needle.charAt(i));
-		int j = res, nLen = needle.length();
-		while (i < nLen - 1) {
-			if (haystack.indexOf(needle.charAt(++i)) != ++j) {
-				res = haystack.indexOf(needle.charAt(i));
+		int res = needle.isEmpty() ? 0 : haystack.indexOf(needle.charAt(0));
+		int i = 0, j = res, nLen = needle.length(), hLen = haystack.length();
+		while (res != -1 && i < nLen - 1 && j < hLen - 1 && hLen - res >= nLen) {
+			if (haystack.charAt(++j) != needle.charAt(++i)) {
+				i = 0;
+				res = haystack.indexOf(needle.charAt(i), ++res);
 				j = res;
 			}
 		}
-		return nLen <= haystack.length() ? res : -1;
+		return hLen - res >= nLen ? res : -1;
 	}
-	
+
 }
