@@ -10,6 +10,9 @@ Leetcode provides a library with over 180 algorithm and database questions. I am
 ####Utilities
 Besides I have committed the predefined data structures into the util package as well with diverse useful methods e.g. array to tree converter, tree printer, array to linkedlist converter etc. Feel free to use them or extend them for simplifying the tests.
 
+####Attention
+Since we are designing algorithm, using of the built in method of java oject should be avoided. For example using the methods other than charAt() of String oject are IMO "cheating". I didn't notice that at the beginning as well, when I get some time I will review the committed solutions again.
+
 enjoy solving!
 
 rekinyz
