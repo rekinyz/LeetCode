@@ -28,10 +28,11 @@ public class GenerateParentheses {
 		} else {
 			Set<String> set = new HashSet<>(n * 2);
 			for (String s : generateParenthesis(n - 1)) {
-				int len = s.length();
 				char[] ca = s.toCharArray();
-				for (int i = 0; i < s.length(); i++) {
-					set.add(String.copyValueOf(ca, 0, i) + "()" + String.copyValueOf(ca, i, len--));
+				int len = s.length();
+				for (int i = 0, j = len; i < len; i++, j--) {
+					set.add(String.copyValueOf(ca, 0, i) + "()"
+							+ String.copyValueOf(ca, i, j));
 				}
 			}
 			return new ArrayList<String>(set);
