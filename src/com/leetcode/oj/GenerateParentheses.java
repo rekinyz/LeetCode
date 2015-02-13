@@ -20,19 +20,21 @@ import java.util.Set;
  */
 public class GenerateParentheses {
 
+	private final static String P = "()";
+
 	public List<String> generateParenthesis(int n) {
 		if (n < 1) {
 			return Arrays.asList("");
 		} else if (n == 1) {
-			return Arrays.asList("()");
+			return Arrays.asList(P);
 		} else {
 			Set<String> set = new HashSet<>(n * 2);
 			for (String s : generateParenthesis(n - 1)) {
 				char[] ca = s.toCharArray();
 				int len = s.length();
-				for (int i = 0, j = len; i < len; i++, j--) {
-					set.add(String.copyValueOf(ca, 0, i) + "()"
-							+ String.copyValueOf(ca, i, j));
+				for (int i = 0; i < len; i++) {
+					set.add(String.copyValueOf(ca, 0, i) + P
+							+ String.copyValueOf(ca, i, len - i));
 				}
 			}
 			return new ArrayList<String>(set);
