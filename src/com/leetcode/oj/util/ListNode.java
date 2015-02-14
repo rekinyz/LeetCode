@@ -17,7 +17,7 @@ public class ListNode {
 		next = null;
 	}
 
-	public static ListNode convert(int[] array) {
+	public static ListNode convert(int... array) {
 		if (array.length == 0) {
 			return null;
 		}
