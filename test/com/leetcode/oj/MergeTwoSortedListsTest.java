@@ -2,8 +2,6 @@ package com.leetcode.oj;
 
 import static org.junit.Assert.assertEquals;
 
-import java.util.Arrays;
-
 import org.junit.Test;
 
 import com.leetcode.oj.util.ListNode;
@@ -16,21 +14,21 @@ public class MergeTwoSortedListsTest {
 	public void testMergeTwoLists1() {
 		int[] a1 = { 0, 1, 2 };
 		int[] a2 = { 2, 3, 4, 4, 5, 6 };
-		assertEquals( Arrays.asList(0, 1, 2, 2, 3, 4, 4, 5, 6), mergeTwoLists(a1, a2).toList());
+		assertEquals( ListNode.convert(0, 1, 2, 2, 3, 4, 4, 5, 6), mergeTwoLists(a1, a2));
 	}
 
 	@Test
 	public void testMergeTwoLists2() {
 		int[] a1 = { 5, 6, 7, 8 };
 		int[] a2 = { 1, 2, 3, 4 };
-		assertEquals( Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8), mergeTwoLists(a1, a2).toList());
+		assertEquals( ListNode.convert(1, 2, 3, 4, 5, 6, 7, 8), mergeTwoLists(a1, a2));
 	}
 
 	@Test
 	public void testMergeTwoLists3() {
 		int[] a1 = { 0, 1, 2, 3, 4, 5, 6, 7 };
 		int[] a2 = {};
-		assertEquals( Arrays.asList(0, 1, 2, 3, 4, 5, 6, 7), mergeTwoLists(a1, a2).toList());
+		assertEquals( ListNode.convert(0, 1, 2, 3, 4, 5, 6, 7), mergeTwoLists(a1, a2));
 	}
 
 	@Test
