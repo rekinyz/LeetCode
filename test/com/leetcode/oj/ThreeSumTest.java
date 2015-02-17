@@ -66,7 +66,7 @@ public class ThreeSumTest {
 		assertEquals(expectedList, resList);
 	}
 
-	@Test
+	@Test(timeout=100)
 	public void testThreeSum4() {
 		int[] num = { 7, -1, 14, -12, -8, 7, 2, -15, 8, 8, -8, -14, -4, -5, 7,
 				9, 11, -4, -15, -6, 1, -14, 4, 3, 10, -5, 2, 1, 6, 11, 2, -2,
