@@ -57,14 +57,14 @@ public class ReverseNodesInKGroup {
 		return head;
 	}
 
-	public ListNode reverseLinkedList(ListNode head, ListNode tail, int count) {
+	public ListNode reverseLinkedList(ListNode head, ListNode res, int count) {
 		while (head != null && count-- != 0) {
 			ListNode next = head.next;
-			head.next = tail;
-			tail = head;
+			head.next = res;
+			res = head;
 			head = next;
 		}
-		return tail;
+		return res;
 	}
 
 }
