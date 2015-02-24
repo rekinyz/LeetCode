@@ -52,14 +52,33 @@ public class ReverseNodesInKGroupTest {
 	
 	@Test
 	public void testReverseKGroup6() {
-		ListNode inputList = ListNode.convert();
-		ListNode expectedList = ListNode.convert();
 		int k = 5;
-		assertEquals(expectedList, reverseKGroup(inputList, k));
+		assertEquals(null, reverseKGroup(null, k));
+	}
+	
+	@Test
+	public void testReverseLinkedList1() {
+		ListNode inputList = ListNode.convert(1, 2, 3, 4, 5, 6, 7, 8, 9);
+		ListNode expectedList = ListNode.convert(9, 8, 7, 6, 5, 4, 3, 2, 1);
+		int k = 9;
+		assertEquals(expectedList, reverseLinkedList(inputList, null, k));
+	}
+	
+	@Test
+	public void testReverseLinkedList2() {
+		ListNode inputList = ListNode.convert(1, 2, 3, 4, 5, 6, 7, 8, 9);
+		ListNode expectedList = ListNode.convert(5, 4, 3, 2, 1, 6, 7, 8, 9);
+		ListNode tail = ListNode.convert(6, 7, 8, 9);
+		int k = 5;
+		assertEquals(expectedList, reverseLinkedList(inputList, tail, k));
 	}
 
 	private ListNode reverseKGroup(ListNode head, int k) {
 		return rnkg.reverseKGroup(head, k);
+	}
+	
+	private ListNode reverseLinkedList(ListNode head, ListNode tail, int count) {
+		return rnkg.reverseLinkedList(head, tail, count);
 	}
 
 }
