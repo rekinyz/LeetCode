@@ -23,26 +23,26 @@ import com.leetcode.oj.util.ListNode;
 public class ReverseNodesInKGroup {
 
 	public ListNode reverseKGroup(ListNode head, int k) {
-	    ListNode p = head;
-	    int count = k;
-	    while (p != null && count != 0) {
-	        p = p.next;
-	        count--;
-	    }
-	    if (count == 0) {
-	        p = reverseKGroup(p, k);
-	        while (count++ < k) {
-	            ListNode next = head.next;
-	            head.next = p;
-	            p = head;
-	            head = next;
-	        }
-	        head = p;
-	    }
-	    return head;
+		ListNode p = head;
+		int count = k;
+		while (p != null && count != 0) {
+			p = p.next;
+			count--;
+		}
+		if (count == 0) {
+			p = reverseKGroup(p, k);
+			while (count++ < k) {
+				ListNode next = head.next;
+				head.next = p;
+				p = head;
+				head = next;
+			}
+			head = p;
+		}
+		return head;
 	}
-	
-	//more understandable version
+
+	// more understandable version
 	public ListNode reverseKGroup1(ListNode head, int k) {
 		ListNode p = head;
 		int count = k;
@@ -58,13 +58,13 @@ public class ReverseNodesInKGroup {
 	}
 
 	public ListNode reverseLinkedList(ListNode head, ListNode tail, int count) {
-	    while (head != null && count--!=0) {
-	    	ListNode next = head.next;
-	        head.next = tail;
-	        tail = head;
-	        head = next;
-	    }
-	    return tail;
+		while (head != null && count-- != 0) {
+			ListNode next = head.next;
+			head.next = tail;
+			tail = head;
+			head = next;
+		}
+		return tail;
 	}
 
 }
