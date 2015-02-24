@@ -32,10 +32,10 @@ public class ReverseNodesInKGroup {
 		if (i == 0) {
 			p = reverseKGroup(p, k);
 			while (i++ < k) {
-				ListNode tmp = head.next;
+				ListNode next = head.next;
 				head.next = p;
 				p = head;
-				head = tmp;
+				head = next;
 			}
 			head = p;
 		}
