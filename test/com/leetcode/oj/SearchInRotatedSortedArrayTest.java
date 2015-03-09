@@ -104,7 +104,7 @@ public class SearchInRotatedSortedArrayTest {
 		assertEquals(7, search(array, 9));
 	}
 
-	private int search(int[] A, int target) {
+	protected int search(int[] A, int target) {
 		return srsa.search(A, target);
 	}
 

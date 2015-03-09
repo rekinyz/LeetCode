@@ -36,7 +36,7 @@ public class TwoSumTest {
 		assertArrayEquals(output, twoSum(input, 0));
 	}
 	
-	private int[] twoSum(int[] numbers, int target){
+	protected int[] twoSum(int[] numbers, int target){
 		return ts.twoSum(numbers, target);
 	}
 	

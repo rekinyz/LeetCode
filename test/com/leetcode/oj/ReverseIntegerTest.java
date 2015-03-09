@@ -43,7 +43,7 @@ public class ReverseIntegerTest {
 		assertEquals(2147483641, reverse(1463847412));
 	}
 
-	private int reverse(int input){
+	protected int reverse(int input){
 		return rti.reverse(input);
 	}
 }

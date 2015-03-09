@@ -80,7 +80,7 @@ public class ZigZagConversionTest {
 		assertEquals("PAYPALISHIRING", convert(s, nRows));
 	}
 	
-	private String convert(String s, int nRows) {
+	protected String convert(String s, int nRows) {
 		return zzc.convert(s, nRows);
     }
 	
