@@ -149,7 +149,7 @@ public class RegularExpressionMatchingTest {
 		assertTrue(isMatch(s, p));
 	}
 	
-	private boolean isMatch(String s, String p) {
+	protected boolean isMatch(String s, String p) {
 		return rem.isMatch(s, p);
 	}
 }
