@@ -6,7 +6,8 @@ import org.junit.Test;
 
 public class MaximalRectangle {
     public static int run(char[][] m) {
-        
+        int max = 0;
+        return max;
     }
     
     @Test
