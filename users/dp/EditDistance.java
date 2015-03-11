@@ -1,11 +1,10 @@
 package dp;
 
-import static org.junit.Assert.fail;
-
+import org.junit.Assert;
 import org.junit.Test;
 
 public class EditDistance {
-    public static int stringEditDistance(String s1, String s2) {
+    public static int run(String s1, String s2) {
         if (s1.length() == 0) {
             if (s2.length() == 0) {
                 return 0;
@@ -36,7 +35,11 @@ public class EditDistance {
 
     @Test
     public void test() {
-        fail("Not yet implemented");
+        Assert.assertEquals("0 ", 0,run("", ""));
+        Assert.assertEquals("2 ", 2,run("123", "1"));
+        Assert.assertEquals("0 ", 0,run("123", "123"));
+        Assert.assertEquals("2 ", 2,run("1", "123"));
+        Assert.assertEquals("5 ", 5,run("", "12345"));
     }
 
 }
