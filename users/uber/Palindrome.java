@@ -25,6 +25,12 @@ public class Palindrome {
         
         return numOfOdd < 1;
     }
+
+    // all possilbe Palindrome from given s
+    // it is special permutation for given list of chars 
+    public static List<String> allPalindrome(String s) {
+    }
+
     @Test
     public void test() {
         Assert.assertEquals(false, canBePalindrome("uber"));
