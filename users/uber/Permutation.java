@@ -38,7 +38,12 @@ public class Permutation {
             b.deleteCharAt(b.length()-1);
         }
     }
-
+    public static List<String> allowDup(int[] counter, int size) {
+        List<String> r = new ArrayList<String>();
+        StringBuilder b = new StringBuilder(size);
+        allowDup(r, b, counter, size);
+        return r;
+    }
     public static List<String> allowDup(String s) {
         List<String> r = new ArrayList<String>();
         int[] counter = Palindrome.freq(s);
