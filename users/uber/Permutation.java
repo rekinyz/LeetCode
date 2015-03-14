@@ -39,6 +39,18 @@ public class Permutation {
         }
     }
 
+    public static List<String> allowDup(String s) {
+        List<String> r = new ArrayList<String>();
+        boolean[] odd = new boolean[Palindrome.ANUM];
+        HashMap<Integer,Boolean> p = new HashMap<Integer,Boolean>();
+        for (int i = 0; i < s.length(); ++i) {
+            p.put(i, true);
+        }
+        StringBuilder b = new StringBuilder(s.length());
+        noDup(r, b, p, s);
+        return r;
+    }
+
     @Test
     public void test() {
         List<String> s1 = Arrays.asList("abc","acb","bac","bca","cab","cba");
