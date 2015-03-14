@@ -41,19 +41,35 @@ public class Permutation {
 
     public static List<String> allowDup(String s) {
         List<String> r = new ArrayList<String>();
-        boolean[] odd = new boolean[Palindrome.ANUM];
-        HashMap<Integer,Boolean> p = new HashMap<Integer,Boolean>();
-        for (int i = 0; i < s.length(); ++i) {
-            p.put(i, true);
-        }
+        int[] counter = Palindrome.freq(s);
+        System.out.println(Arrays.toString(counter));
         StringBuilder b = new StringBuilder(s.length());
-        noDup(r, b, p, s);
+        allowDup(r, b, counter, s.length());
         return r;
+    }
+    public static void allowDup(List<String> r, StringBuilder b, 
+            int[] c, int size) {
+        if (b.length() == size) {
+            r.add(b.toString());
+            return;
+        }
+        for (char i = 0; i < c.length; ++i) {
+            if (c[i] == 0) continue;
+            c[i]--;
+            char a = (char) ('a'+i);
+            b.append(a);
+            System.out.format("b %s c[i] %d\r\n", b.toString(), c[i]);
+            allowDup(r, b, c,size);
+            c[i]++;
+            b.deleteCharAt(b.length()-1);
+        }
     }
 
     @Test
     public void test() {
         List<String> s1 = Arrays.asList("abc","acb","bac","bca","cab","cba");
         Assert.assertEquals(s1, noDup("abc"));
+        List<String> s2 = Arrays.asList("aac","aca","caa");
+        Assert.assertEquals(s2, allowDup("aac"));
     }
 }
