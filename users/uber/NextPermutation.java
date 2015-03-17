@@ -1,0 +1,14 @@
+package uber;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class NextPermutation {
+
+    @Test
+    public void test() {
+        fail("Not yet implemented");
+    }
+
+}
