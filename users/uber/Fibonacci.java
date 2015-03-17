@@ -30,13 +30,36 @@ public class Fibonacci {
         }
         return d;
     }
+    public static int fibSlow(int n) {
+        if (n == 1) return 0;
+        if (n == 2) return 1;
+        return fibSlow(n-1) + fibSlow(n-2);
+    }
+    public static int fib(int n) {
+        if (n <= 1) return 0;
+        if (n == 2) return 1;
+        int f1 = 1, f2 = 0, f = 0;
+        for (int i = 3; i <= n; ++i) {
+            f = f1 + f2;
+            f2 = f1;
+            f1 = f;
+        }
+        return f;
+    }
     @Test
     public void test() {
+        Assert.assertEquals(0, coding("270"));
         Assert.assertEquals(0, coding("200"));
         Assert.assertEquals(1, coding("2"));
         Assert.assertEquals(2, coding("21"));
         Assert.assertEquals(3, coding("212"));
         Assert.assertEquals(2, coding("2120"));
+        for (int i = 1; i < 20; ++i) {
+            int f = fib(i);
+            int s = fibSlow(i);
+            System.out.format("%d f %d, s %d\r\n", i, f, s);
+            Assert.assertEquals(f, s);
+        }
     }
 
 }
