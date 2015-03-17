@@ -19,7 +19,7 @@ import static org.junit.Assert.fail;
 
 import org.junit.Test;
 
-public class SearchDirecctioin {
+public class SearchDirection {
 
     @Test
     public void test() {
