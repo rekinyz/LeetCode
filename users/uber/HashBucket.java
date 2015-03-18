@@ -6,8 +6,8 @@ import junit.framework.Assert;
 
 import org.junit.Test;
 /*http://blog.csdn.net/whuwangyi/article/details/43112895
- * 瑕佹眰璁捐涓�涓暟鎹粨鏋勶紝婊¤冻insert(int key)锛宺emove(int key)鍜宨nt getMostFrequentKey()銆�
- * 瀵逛簬鍚屼竴涓猭ey锛屾瘡娆¤insert锛岃鏁板姞1锛涙瘡娆¤remove锛岃鏁板噺1锛涚劧鍚庨渶瑕佸彇鏈�澶ount鐨刱ey銆傝姹傛墍鏈夋搷浣滈兘鏄疧(1)澶嶆潅搴︺��
+ * 要求设计一个数据结构，满足insert(int key)，remove(int key)和int getMostFrequentKey()。
+- * 对于同一个key，每次被insert，计数加1；每次被remove，计数减1；然后需要取最大count的key。要求所有操作都是O(1)复杂度。
  * so instead of using set to save Bucket Elem mapping, it is better use FastLinkedList
  */
 public class HashBucket {
@@ -49,7 +49,7 @@ public class HashBucket {
         }
         elem.b = null;
         e = elem.bind(b);
-        elems.put(elem.key, e);
+        elems.put(elem.key, e);// KEY, java copy is just reference copy, so have to put to map again or do a value copy
     }
     public void insert(int key) {
         FastLinkedList.Node<Elem> n = elems.get(key);
