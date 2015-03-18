@@ -191,7 +191,7 @@ public class FastLinkedList<E>
     /**
      * Unlinks non-null node x.
      */
-    E unlink(Node<E> x) {
+    public E unlink(Node<E> x) {
         // assert x != null;
         final E element = x.item;
         final Node<E> next = x.next;
