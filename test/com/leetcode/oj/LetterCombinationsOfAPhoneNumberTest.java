@@ -61,7 +61,7 @@ public class LetterCombinationsOfAPhoneNumberTest {
 		assertEquals(expected, result);
 	}
 
-	private List<String> letterCombinations(String digits) {
+	protected List<String> letterCombinations(String digits) {
 		return lcn.letterCombinations(digits);
 	}
 
