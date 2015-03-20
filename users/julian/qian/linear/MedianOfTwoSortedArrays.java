@@ -1,7 +1,9 @@
 package julian.qian.linear;
 
 import com.leetcode.oj.MedianOfTwoSortedArraysTest;
-
+// what if more than 2 arrays?
+// obviously the overall median must be between the smallest and the largest of the five medians.
+// this is m*n*lg(n)
 public class MedianOfTwoSortedArrays extends MedianOfTwoSortedArraysTest{
 
     protected int findK(int[] a, int s1, int e1, int[] b, int s2, int e2, int k){

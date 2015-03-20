@@ -28,7 +28,6 @@ import java.util.NoSuchElementException;
  * encapsulates the list.
  *
  * If no such object exists, the list should be "wrapped" using the
- * {@link Collections#synchronizedList Collections.synchronizedList}
  * method.  This is best done at creation time, to prevent accidental
  * unsynchronized access to the list:<pre>
  *   List list = Collections.synchronizedList(new LinkedList(...));</pre>
@@ -106,7 +105,7 @@ public class FastLinkedList<E>
      */
     private Node<E> linkFirst(E e) {
         final Node<E> f = first;
-        final Node<E> newNode = new Node<>(null, e, f);
+        final Node<E> newNode = new Node<E>(null, e, f);
         first = newNode;
         if (f == null)
             last = newNode;
@@ -122,7 +121,7 @@ public class FastLinkedList<E>
      */
     public Node<E> linkLast(E e) {
         final Node<E> l = last;
-        final Node<E> newNode = new Node<>(l, e, null);
+        final Node<E> newNode = new Node<E>(l, e, null);
         last = newNode;
         if (l == null)
             first = newNode;
@@ -139,7 +138,7 @@ public class FastLinkedList<E>
     public Node<E> linkBefore(E e, Node<E> succ) {
         // assert succ != null;
         final Node<E> pred = succ.prev;
-        final Node<E> newNode = new Node<>(pred, e, succ);
+        final Node<E> newNode = new Node<E>(pred, e, succ);
         succ.prev = newNode;
         if (pred == null)
             first = newNode;
@@ -430,7 +429,7 @@ public class FastLinkedList<E>
 
         for (Object o : a) {
             @SuppressWarnings("unchecked") E e = (E) o;
-            Node<E> newNode = new Node<>(pred, e, null);
+            Node<E> newNode = new Node<E>(pred, e, null);
             if (pred == null)
                 first = newNode;
             else
@@ -709,7 +708,7 @@ public class FastLinkedList<E>
      * Adds the specified element as the tail (last element) of this list.
      *
      * @param e the element to add
-     * @return {@code true} (as specified by {@link Queue#offer})
+     * @return {@code true} (as specified by
      * @since 1.5
      */
     @Override

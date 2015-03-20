@@ -43,7 +43,7 @@ public class SingleNumber {
 	//O(N+NlogN) time, O(N+1) space
 	public int singleNumber2(int[] A) {
 		Arrays.sort(A);
-		Stack<Integer> stack = new Stack<>();
+		Stack<Integer> stack = new Stack<Integer>();
 		for (int a : A) {
 			if(stack.isEmpty()||stack.peek()!=a){
 				stack.push(a);
