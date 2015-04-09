@@ -13,7 +13,7 @@ Leetcode provides a library with over 180 algorithm and database questions. I am
 Besides I have committed the predefined data structures into the util package as well with diverse useful methods e.g. array to tree converter, tree printer, array to linkedlist converter etc. Feel free to use them or extend them for simplifying the tests.
 
 ####Attention
-Since we are designing algorithm, using of some of the built in methods of java objects or special data structure should be avoided. For example using the methods other than charAt() of String oject are IMO "cheating". I didn't notice that at the beginning as well, when I get some time I will review the committed code again.
+Since we are designing algorithm, some of the built-in methods of java objects or special data structure should not be used. For example using the methods other than charAt() of String object are IMO "cheating". I didn't notice this at the very beginning as well, when I get some time I will review the committed code again.
 
 enjoy solving!
 
