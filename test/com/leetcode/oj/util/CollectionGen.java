@@ -1,9 +1,18 @@
 package com.leetcode.oj.util;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 
 public class CollectionGen {
+    public static <T> HashSet<T> toSet(T[] t) {
+        HashSet<T> set = new HashSet<T>(t.length*2);
+        for (T str : t) {
+            set.add(str);
+        }
+        return set;
+    }
 
     public static <T,V> HashMap<T, V> toMap(T[] s, V v) {
     	HashMap<T, V> set = new HashMap<T, V>(s.length*2);
@@ -54,5 +63,20 @@ public class CollectionGen {
         }
         return set;
     }
-
+    
+    public static <T> List<T> toList(T[] t) {
+        List<T> a = new ArrayList<T>();
+        for (T b : t) {
+            a.add(b);
+        }
+        return a;
+    }
+    public static Integer[] intToInteger(int[] oldArray) {
+        Integer[] newArray = new Integer[oldArray.length];
+        int i = 0;
+        for (int value : oldArray) {
+            newArray[i++] = Integer.valueOf(value);
+        }
+        return newArray;
+    }
 }

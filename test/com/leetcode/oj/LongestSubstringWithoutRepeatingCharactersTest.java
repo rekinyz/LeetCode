@@ -50,7 +50,7 @@ public class LongestSubstringWithoutRepeatingCharactersTest {
 		assertEquals(12, lengthOfLongestSubstring(s));
 	}
 	
-	private int lengthOfLongestSubstring(String s){
+	protected int lengthOfLongestSubstring(String s){
 		return lswrc.lengthOfLongestSubstring(s);
 	}
 

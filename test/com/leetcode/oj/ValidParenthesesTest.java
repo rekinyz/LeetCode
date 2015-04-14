@@ -1,7 +1,7 @@
 package com.leetcode.oj;
 
-import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
@@ -39,7 +39,7 @@ public class ValidParenthesesTest {
 		assertTrue(isValid(s));
 	}
 
-	private boolean isValid(String s) {
+	protected boolean isValid(String s) {
 		return vp.isValid(s);
 	}
 

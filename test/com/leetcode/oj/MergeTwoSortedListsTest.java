@@ -38,7 +38,7 @@ public class MergeTwoSortedListsTest {
 		assertEquals(null, mergeTwoLists(a1, a2));
 	}
 
-	private ListNode mergeTwoLists(int[] a1, int[] a2) {
+	protected ListNode mergeTwoLists(int[] a1, int[] a2) {
 		ListNode l1 = ListNode.convert(a1);
 		ListNode l2 = ListNode.convert(a2);
 		return tmsl.mergeTwoLists(l1, l2);

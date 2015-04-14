@@ -14,11 +14,6 @@ public class MergeKSortedListsTest {
 	MergeKSortedLists mksl = new MergeKSortedLists();
 
 	@Test
-	public void testMergeKSortedLists0() {
-		assertEquals(null, mksl.mergeKLists(null));
-	}
-	
-	@Test
 	public void testMergeKSortedLists1() {
 		ListNode n1 = ListNode.convert();
 		ListNode expectedList = ListNode.convert();
@@ -66,7 +61,7 @@ public class MergeKSortedListsTest {
 		assertEquals(expectedList, mergeKLists(n1, n2, n3, n4, n5));
 	}
 
-	private ListNode mergeKLists(ListNode... node) {
+	protected ListNode mergeKLists(ListNode... node) {
 		List<ListNode> lists = Arrays.asList(node);
 		return mksl.mergeKLists(lists);
 	}

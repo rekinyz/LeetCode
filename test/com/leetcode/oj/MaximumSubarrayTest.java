@@ -86,7 +86,7 @@ public class MaximumSubarrayTest {
 		assertEquals(-1, maxSubArray(num));
 	}
 
-	private int maxSubArray(int[] array) {
+	protected int maxSubArray(int[] array) {
 		return ps.maxSubArray(array);
 	}
 }

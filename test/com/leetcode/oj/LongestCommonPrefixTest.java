@@ -50,7 +50,7 @@ public class LongestCommonPrefixTest {
 		assertEquals("", longestCommonPrefix(strs));
 	}
 	
-	private String longestCommonPrefix(String[] strs) {
+	protected String longestCommonPrefix(String[] strs) {
 		return lcp.longestCommonPrefix(strs);
 	}
 	

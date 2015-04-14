@@ -43,7 +43,7 @@ public class LongestPalindromicSubstringTest {
 		assertEquals("a", longestPalindrome(s));
 	}
 	
-	private String longestPalindrome(String s) {
+	protected String longestPalindrome(String s) {
 		return lps.longestPalindrome(s);
 	}
 }

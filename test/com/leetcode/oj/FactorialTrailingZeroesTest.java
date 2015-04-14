@@ -62,7 +62,7 @@ public class FactorialTrailingZeroesTest {
 		assertEquals(452137076, trailingZeroes(n));
 	}
 	
-	private int trailingZeroes(int n) {
+	protected int trailingZeroes(int n) {
 		return ftz.trailingZeroes(n);
     }
 }

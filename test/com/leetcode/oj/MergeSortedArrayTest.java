@@ -48,7 +48,7 @@ public class MergeSortedArrayTest {
 		assertArrayEquals(res, merge(A, 0, B, B.length));
 	}
 
-	private int[] merge(int[] A, int m, int[] B, int n) {
+	protected int[] merge(int[] A, int m, int[] B, int n) {
 		msa.merge(A, m, B, n);
 		return A;
 	}

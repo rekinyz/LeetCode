@@ -62,7 +62,7 @@ public class SubsetsTest {
 		}
 	}
 
-	private List<List<Integer>> subsets(int[] S) {
+	protected List<List<Integer>> subsets(int[] S) {
 		return ss.subsets(S);
 	}
 

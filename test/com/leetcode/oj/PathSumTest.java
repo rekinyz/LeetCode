@@ -34,7 +34,7 @@ public class PathSumTest {
 		assertTrue(hasPathSum(input, 22));
 	}
 
-	private boolean hasPathSum(Integer[] input, int sum) {
+	protected boolean hasPathSum(Integer[] input, int sum) {
 		TreeNode root = TreeNode.convert(input);
 		return tree.hasPathSum(root, sum);
 	}

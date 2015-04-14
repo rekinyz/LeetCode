@@ -51,7 +51,7 @@ public class PathSum2Test {
 		assertEquals(Arrays.asList(1, -2, 3), pathSum(input, 2).get(0));
 	}
 
-	private List<List<Integer>> pathSum(Integer[] input, int sum) {
+	protected List<List<Integer>> pathSum(Integer[] input, int sum) {
 		TreeNode root = TreeNode.convert(input);
 		return tree.pathSum(root, sum);
 	}

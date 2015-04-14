@@ -34,7 +34,7 @@ public class MaximumDepthOfBinaryTreeTest {
 		assertEquals(1, maxDepth(input));
 	}
 
-	private int maxDepth(Integer[] input) {
+	protected int maxDepth(Integer[] input) {
 		TreeNode root = TreeNode.convert(input);
 		return tree.maxDepth(root);
 	}
