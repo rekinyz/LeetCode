@@ -57,7 +57,7 @@ public class CompareVersionNumbersTest {
 		assertEquals(0, compareVersion(v1, v2));
 	}
 	
-	private int compareVersion(String v1, String v2){
+	protected int compareVersion(String v1, String v2){
 		return cvn.compareVersion(v1, v2);
 	}
 }

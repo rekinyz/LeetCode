@@ -7,7 +7,7 @@ import org.junit.Test;
 
 public class MinStackTest {
 
-	MinStack stack;
+	protected MinStack stack;
 
 	@Before
 	public void setUp() {

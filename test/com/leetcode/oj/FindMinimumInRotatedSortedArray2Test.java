@@ -1,6 +1,6 @@
 package com.leetcode.oj;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
@@ -32,7 +32,7 @@ public class FindMinimumInRotatedSortedArray2Test {
 		assertEquals(1, findMin(s));
 	}
 
-	private int findMin(int[] num){
+	protected int findMin(int[] num){
 		return sa2.findMin(num);
 	}
 }
