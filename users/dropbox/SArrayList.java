@@ -3,7 +3,7 @@ package dropbox;
 import java.util.Arrays;
 
 import org.junit.Test;
-
+//就是实现ArrayList
 public class SArrayList<T> {
     protected Object[] data;
     protected int size;

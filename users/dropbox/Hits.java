@@ -13,6 +13,7 @@ get_hits() 时就返回这个数组的sum
 精度问题：可以增加bucket。 内存 vs 精度 vs 
 
 TODO: 看 http://en.wikipedia.org/wiki/Compare-and-swap lock free and wait free algorithm
+具体代码参考 http://www.michael-noll.com/blog/2013/01/18/implementing-real-time-trending-topics-in-storm/
  */
 public class Hits {
     private final int[] counts;
