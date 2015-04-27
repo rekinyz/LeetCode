@@ -66,7 +66,7 @@ public class RemoveDuplicatesFromSortedListTest {
 				deleteDuplicates(0, 1, 2, 2, 3, 4));
 	}
 
-	private ListNode deleteDuplicates(int... array) {
+	public ListNode deleteDuplicates(int... array) {
 		ListNode node = ListNode.convert(array);
 		return rdfsl.deleteDuplicates(node);
 	}

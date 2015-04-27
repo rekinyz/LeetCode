@@ -52,7 +52,7 @@ public class SwapNodesInPairsTest {
 		assertEquals(expectedList, swapPairs(inputList));
 	}
 
-	private ListNode swapPairs(ListNode head) {
+	public ListNode swapPairs(ListNode head) {
 		return snip.swapPairs(head);
 	}
 

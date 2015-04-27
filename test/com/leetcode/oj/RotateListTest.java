@@ -52,7 +52,7 @@ public class RotateListTest {
 		assertEquals(ListNode.convert(1), rotateRight(array, 1));
 	}
 
-	private ListNode rotateRight(int[] array, int n) {
+	public ListNode rotateRight(int[] array, int n) {
 		ListNode input = ListNode.convert(array);
 		return rl.rotateRight(input, n);
 	}

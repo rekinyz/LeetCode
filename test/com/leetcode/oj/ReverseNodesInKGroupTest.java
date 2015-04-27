@@ -73,11 +73,11 @@ public class ReverseNodesInKGroupTest {
 		assertEquals(expectedList, reverseLinkedList(inputList, tail, k));
 	}
 
-	private ListNode reverseKGroup(ListNode head, int k) {
+	public ListNode reverseKGroup(ListNode head, int k) {
 		return rnkg.reverseKGroup(head, k);
 	}
 	
-	private ListNode reverseLinkedList(ListNode head, ListNode tail, int count) {
+	public ListNode reverseLinkedList(ListNode head, ListNode tail, int count) {
 		return rnkg.reverseLinkedList(head, tail, count);
 	}
 

@@ -67,7 +67,7 @@ public class SingleNumber2Test {
 		return res;
 	}
 
-	private int singleNumber(int[] A) {
+	public int singleNumber(int[] A) {
 		return sn.singleNumber(A);
 	}
 	

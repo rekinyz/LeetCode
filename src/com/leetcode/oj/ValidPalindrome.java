@@ -17,6 +17,7 @@ package com.leetcode.oj;
 public class ValidPalindrome {
 
 	public boolean isPalindrome(String s) {
+	    // [^a-z0-9]  match a single character not a~z 0~9
 		s = s.toLowerCase().replaceAll("[^a-z0-9]", "");
 		int tail = s.length() - 1;
 		for (int head = 0; head < tail; head++, tail--) {

@@ -52,12 +52,12 @@ public class LinkedListCycle2Test {
 		assertEquals(-4, detectCycle(input, 4).val);
 	}
 	
-	private ListNode detectCycle(int[] input) {
+	public ListNode detectCycle(int[] input) {
 		ListNode node = ListNode.convert(input);
 		return list.detectCycle(node);
 	}
 
-	private ListNode detectCycle(int[] input, int n) {
+	public ListNode detectCycle(int[] input, int n) {
 		ListNode node = ListNode.cycle(input, n);
 		return list.detectCycle(node);
 	}
