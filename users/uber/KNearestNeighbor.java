@@ -14,6 +14,10 @@ import org.junit.Test;
  * 在第二节论述），把数组划分为Sa和Sb俩部分，Sa<=X<=Sb，如果要查找的k个元素小于Sa的元素个数，
  * 则返回Sa中较小的k个元素，否则返回Sa中所有元素+Sb中小的k-|Sa|个元素。像上述过程一样，
  * 这个运用类似快速排序的partition的快速选择SELECT算法寻找最小的k个元素，在最坏情况下亦能做到O（N）的复杂度。
+ * 
+ * 有一个类似的：
+ * 任给一个手机的位置信号(经纬度)，需要返回附近5mile 的POI
+   但是不一样
  */
 public class KNearestNeighbor {
 

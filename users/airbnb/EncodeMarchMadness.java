@@ -12,6 +12,11 @@ import org.junit.Test;
  * 循环赛制和 淘汰赛是不一样的， 循环赛最佳做法是2维数组， 普通2维数组是 n*i + j, 如果需要减少内存，可以用 n*i + j-1 - (i+1)*i /2
  * 算积分最好用 array，直接返回，
  * 看两队比赛成绩，内存够，其实也可以用 2维数组， 用 matchTeam*2-1 不好直接找
+ * 
+ * Store a set of sudden-death tournament results in a compact format (eg. a bit array) and
+ *  a set of predicted match results (also in a bit array). Score the predictions,
+ *   giving one point per correctly guessed match, 
+ * without unpacking the bit array into a more convenient format (ie. you have to traverse the tree in-place).  
  */
 public class EncodeMarchMadness {
     int[] cycleScore;
