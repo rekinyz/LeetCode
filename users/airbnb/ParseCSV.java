@@ -16,6 +16,7 @@ public class ParseCSV {
  * 要求输出Json format “{name:some_name, address:some_addres,phone:some_phone, job:some_job}”
  * 错误输入（多于4个模块，没有\r\n（line break是啥？），名字里面有 |， 
  * 考虑做成library
+ * 要处理好转义字符，比如\r\n 
  */
     private final String[] fields;
     private final String dilimit;

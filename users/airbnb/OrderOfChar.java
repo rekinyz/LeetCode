@@ -23,6 +23,7 @@ import org.junit.Test;
  */
 public class OrderOfChar {
     public static class Graph {
+        //相当于2维数组，记录点之间的联系，有向图也可以用
         List<List<Integer>> adj;
         public Graph(int v) {
             adj = new ArrayList<List<Integer>>();

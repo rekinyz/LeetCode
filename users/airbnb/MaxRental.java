@@ -9,6 +9,8 @@ import org.junit.Test;
  * 不相邻的range 求和最大 [check-in date, check-out date/ check-in date, check-out date/ check-in date,….]
  * 求最多能租出去几天。
  * 用check-in date排序
+ * http://www.geeksforgeeks.org/greedy-algorithms-set-1-activity-selection-problem/
+ * http://en.wikipedia.org/wiki/Activity_selection_problem
  */
 public class MaxRental {
     public static class Rental implements Comparable<Rental>{
