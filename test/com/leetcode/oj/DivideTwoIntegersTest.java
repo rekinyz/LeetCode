@@ -99,37 +99,37 @@ public class DivideTwoIntegersTest {
 
 	@Test
 	public void testDivide16() {
-		int dividend = -20000, divisor = -50000;
+		int dividend = -1073741824, divisor = -Integer.MAX_VALUE;
 		assertEquals(dividend / divisor, dti.divide(dividend, divisor));
 	}
 
 	@Test
 	public void testDivide17() {
-		int dividend = 20000, divisor = -50000;
+		int dividend = 1073741824, divisor = -Integer.MAX_VALUE;
 		assertEquals(dividend / divisor, dti.divide(dividend, divisor));
 	}
 
 	@Test
 	public void testDivide18() {
-		int dividend = 20000, divisor = 50000;
+		int dividend = 1073741824, divisor = Integer.MAX_VALUE;
 		assertEquals(dividend / divisor, dti.divide(dividend, divisor));
 	}
 
 	@Test
 	public void testDivide19() {
-		int dividend = -50000, divisor = -20000;
+		int dividend = -Integer.MAX_VALUE, divisor = -1073741824;
 		assertEquals(dividend / divisor, dti.divide(dividend, divisor));
 	}
 
 	@Test
 	public void testDivide20() {
-		int dividend = 50000, divisor = -20000;
+		int dividend = Integer.MAX_VALUE, divisor = -1073741824;
 		assertEquals(dividend / divisor, dti.divide(dividend, divisor));
 	}
 
 	@Test
 	public void testDivide21() {
-		int dividend = 50000, divisor = 20000;
+		int dividend = Integer.MAX_VALUE, divisor = 1073741824;
 		assertEquals(dividend / divisor, dti.divide(dividend, divisor));
 	}
 
@@ -202,6 +202,48 @@ public class DivideTwoIntegersTest {
 	@Test
 	public void testDivide33() {
 		int dividend = Integer.MAX_VALUE, divisor = Integer.MIN_VALUE;
+		assertEquals(dividend / divisor, dti.divide(dividend, divisor));
+	}
+
+	@Test
+	public void testDivide34() {
+		int dividend = -1234, divisor = 2;
+		assertEquals(dividend / divisor, dti.divide(dividend, divisor));
+	}
+
+	@Test
+	public void testDivide35() {
+		int dividend = 1234, divisor = 2;
+		assertEquals(dividend / divisor, dti.divide(dividend, divisor));
+	}
+
+	@Test
+	public void testDivide36() {
+		int dividend = -1234, divisor = -2;
+		assertEquals(dividend / divisor, dti.divide(dividend, divisor));
+	}
+
+	@Test
+	public void testDivide37() {
+		int dividend = 1234, divisor = -2;
+		assertEquals(dividend / divisor, dti.divide(dividend, divisor));
+	}
+
+	@Test
+	public void testDivide38() {
+		int dividend = -1060849722, divisor = 99958928;
+		assertEquals(dividend / divisor, dti.divide(dividend, divisor));
+	}
+
+	@Test
+	public void testDivide39() {
+		int dividend = -1106478492, divisor = 36592642;
+		assertEquals(dividend / divisor, dti.divide(dividend, divisor));
+	}
+
+	@Test
+	public void testDivide40() {
+		int dividend = 8140, divisor = 80;
 		assertEquals(dividend / divisor, dti.divide(dividend, divisor));
 	}
 }
