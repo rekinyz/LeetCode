@@ -12,7 +12,7 @@ public class DivideTwoIntegers {
 	public int divide(final int dividend, final int divisor) {
 		int res = Integer.MAX_VALUE;
 		if (divisor != 0) {
-			res = (int) div(abs(dividend), abs(divisor));
+			res = (int) div(Math.abs((long)dividend), Math.abs((long)divisor));
 			if (dividend > 0 ^ divisor > 0) {
 				res = 0 - res;
 			}
@@ -29,7 +29,4 @@ public class DivideTwoIntegers {
 		return total;
 	}
 
-	private long abs(final long x) {
-		return x < 0 ? 0 - x : x;
-	}
 }
