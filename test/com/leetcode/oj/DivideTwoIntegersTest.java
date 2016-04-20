@@ -99,37 +99,37 @@ public class DivideTwoIntegersTest {
 
 	@Test
 	public void testDivide16() {
-		int dividend = -1073741824, divisor = -Integer.MAX_VALUE;
+		int dividend = -1073741823, divisor = -Integer.MAX_VALUE;
 		assertEquals(dividend / divisor, dti.divide(dividend, divisor));
 	}
 
 	@Test
 	public void testDivide17() {
-		int dividend = 1073741824, divisor = -Integer.MAX_VALUE;
+		int dividend = 1073741823, divisor = -Integer.MAX_VALUE;
 		assertEquals(dividend / divisor, dti.divide(dividend, divisor));
 	}
 
 	@Test
 	public void testDivide18() {
-		int dividend = 1073741824, divisor = Integer.MAX_VALUE;
+		int dividend = 1073741823, divisor = Integer.MAX_VALUE;
 		assertEquals(dividend / divisor, dti.divide(dividend, divisor));
 	}
 
 	@Test
 	public void testDivide19() {
-		int dividend = -Integer.MAX_VALUE, divisor = -1073741824;
+		int dividend = -Integer.MAX_VALUE, divisor = -1073741823;
 		assertEquals(dividend / divisor, dti.divide(dividend, divisor));
 	}
 
 	@Test
 	public void testDivide20() {
-		int dividend = Integer.MAX_VALUE, divisor = -1073741824;
+		int dividend = Integer.MAX_VALUE, divisor = -1073741823;
 		assertEquals(dividend / divisor, dti.divide(dividend, divisor));
 	}
 
 	@Test
 	public void testDivide21() {
-		int dividend = Integer.MAX_VALUE, divisor = 1073741824;
+		int dividend = Integer.MAX_VALUE, divisor = 1073741823;
 		assertEquals(dividend / divisor, dti.divide(dividend, divisor));
 	}
 
