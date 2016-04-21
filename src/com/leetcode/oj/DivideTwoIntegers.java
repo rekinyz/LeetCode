@@ -8,7 +8,7 @@ package com.leetcode.oj;
  * @author rekinyz
  */
 public class DivideTwoIntegers {
-	public int divide(int dividend, int divisor) {
+	public int divide(final int dividend, final int divisor) {
 		int res = Integer.MAX_VALUE;
 		if (divisor != 0) {
 			res = (int) div(Math.abs((long) dividend), Math.abs((long) divisor), 0);
@@ -19,7 +19,7 @@ public class DivideTwoIntegers {
 		return res;
 	}
 
-	private long div(long x, long y, int sum) {
+	private long div(final long x, long y, int sum) {
 		long oy = y, res = sum, i = 1;
 		sum = 1;
 		while (x >= y) {
@@ -33,4 +33,12 @@ public class DivideTwoIntegers {
 		return res;
 	}
 
+	//this solution will also work, but the performance is not good
+	private long div1(long x, final long y, long res) {
+		while (x >= y) {
+			x -= y;
+			res++;
+		}
+		return res;
+	}
 }
