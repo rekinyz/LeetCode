@@ -8,15 +8,25 @@ package com.leetcode.oj;
  */
 public class Power {
 	public double myPow(double x, int n) {
-		double res = x;
-		if (n == 0) {
-			return 1;
+		long m = Math.abs((long) n);
+		double res = 1.0;
+		for (double y = x; m != 0; m >>= 1) {
+			if ((m & 1) == 1) {
+				res *= y;
+			}
+			y *= y;
 		}
-		for (int i = 1; i < n; i++) {
-			res = res * x;
+		return n < 0 ? 1.0 / res : res;
+	}
+
+	//it will compute the correct result, but the performance is very very bad for some extreme cases
+	public double myPow0(double x, int n) {
+		double res = 1.0;
+		for (int i = 0; i < Math.abs((long) n); i++) {
+			res *= x;
 		}
-		if (n < 0) {
-			res = 1 / res;
+		if (n <= 0) {
+			res = 1.0 / res;
 		}
 		return res;
 	}
