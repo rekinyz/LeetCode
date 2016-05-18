@@ -20,14 +20,14 @@ public class DivideTwoIntegers {
 	}
 
 	private long div(final long x, long y, int sum) {
-		long oy = y, res = sum, i = 1;
+		long oy = y, res = sum;
 		sum = 1;
 		while (x >= y) {
 			if (x < y << 1) {
 				return res + div(x - y, oy, sum);
 			} else {
 				y <<= 1;
-				sum = 1 << i++;
+				sum <<= 1;
 			}
 		}
 		return res;
