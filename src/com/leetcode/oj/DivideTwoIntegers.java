@@ -10,6 +10,8 @@ package com.leetcode.oj;
 public class DivideTwoIntegers {
 	public int divide(final int dividend, final int divisor) {
 		int res = Integer.MAX_VALUE;
+		// use this condition to satisfy the Leetcode online judge system:
+		// if (divisor != 0 && (dividend != Integer.MIN_VALUE || divisor != -1))
 		if (divisor != 0) {
 			res = (int) div(Math.abs((long) dividend), Math.abs((long) divisor), 0);
 			if (dividend > 0 ^ divisor > 0) {
@@ -29,15 +31,6 @@ public class DivideTwoIntegers {
 				y <<= 1;
 				sum <<= 1;
 			}
-		}
-		return res;
-	}
-
-	// this solution will also work, but the performance is not good
-	private long div1(long x, final long y, long res) {
-		while (x >= y) {
-			x -= y;
-			res++;
 		}
 		return res;
 	}
