@@ -33,7 +33,7 @@ public class DivideTwoIntegers {
 		return res;
 	}
 
-	//this solution will also work, but the performance is not good
+	// this solution will also work, but the performance is not good
 	private long div1(long x, final long y, long res) {
 		while (x >= y) {
 			x -= y;
