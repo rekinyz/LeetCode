@@ -22,6 +22,33 @@ import java.util.Set;
 public class SubstringConcatenationAllWords {
 	public List<Integer> findSubstring(String s, String[] words) {
 		List<Integer> result = new ArrayList<>();
+		List<String> wList = new ArrayList<>(Arrays.asList(words));
+		for (int i = 0; i < s.length(); i++) {
+			int wordLen = words[0].length(), len = i + wordLen * words.length;
+			String w = "";
+			for (int j = i; j < len && len <= s.length(); j++) {
+				w += s.charAt(j);
+				if (w.length() == wordLen) {
+					if (wList.contains(w)) {
+						wList.remove(w);
+					} else {
+						j = s.length();
+					}
+					w = "";
+				}
+				if (wList.size() == 0) {
+					if (!result.contains(i)) {
+						result.add(i);
+					}
+				}
+			}
+		}
+		return result;
+	}
+
+	// bad performance solution
+	public List<Integer> findSubstring1(String s, String[] words) {
+		List<Integer> result = new ArrayList<>();
 		int wordsNum = words.length;
 		if (wordsNum != 0) {
 			int len = words[0].length();
@@ -44,7 +71,7 @@ public class SubstringConcatenationAllWords {
 		permutation("", words, set);
 		return set;
 	}
-	
+
 	private void permutation(String prefix, String[] words, Set<String> set) {
 		int len = words.length;
 		if (len == 0) {
