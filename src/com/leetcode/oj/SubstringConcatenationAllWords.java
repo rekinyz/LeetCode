@@ -8,23 +8,25 @@ import java.util.Set;
 
 /**
  * Substring with Concatenation of All Words
- * 
- * You are given a string, s, and a list of words, words, that are all of the same length. 
- * Find all starting indices of substring(s) in s that is a concatenation of each word in words exactly once and without any intervening characters.
- * 
+ *
+ * You are given a string, s, and a list of words, words, that are all of the
+ * same length. Find all starting indices of substring(s) in s that is a
+ * concatenation of each word in words exactly once and without any intervening
+ * characters.
+ *
  * For example, given: s: "barfoothefoobarman" words: ["foo", "bar"]
- * 
+ *
  * You should return the indices: [0,9]. (order does not matter).
- * 
+ *
  * @author rekinyz
  *
  */
 public class SubstringConcatenationAllWords {
 	public List<Integer> findSubstring(String s, String[] words) {
 		List<Integer> result = new ArrayList<>();
-		List<String> wList = new ArrayList<>(Arrays.asList(words));
 		for (int i = 0; i < s.length(); i++) {
 			int wordLen = words[0].length(), len = i + wordLen * words.length;
+			List<String> wList = new ArrayList<>(Arrays.asList(words));
 			String w = "";
 			for (int j = i; j < len && len <= s.length(); j++) {
 				w += s.charAt(j);
