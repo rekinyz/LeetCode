@@ -28,9 +28,9 @@ import com.leetcode.oj.util.TreeNode;
  */
 public class BinaryTreePreorderTraversal {
 
-	//TODO use iterateve way in stead of trivial recursive solution
-	public List<Integer> preorderTraversal(TreeNode root) {
-		List<Integer> result = new ArrayList<Integer>();
+	//TODO use iterative way in stead of trivial recursive solution
+	List<Integer> preorderTraversal(TreeNode root) {
+		List<Integer> result = new ArrayList<>();
 		preorderTraversal(root, result);
 		return result;
 	}
