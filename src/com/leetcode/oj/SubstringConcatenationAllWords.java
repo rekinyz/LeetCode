@@ -16,7 +16,7 @@ import java.util.*;
  *
  * @author rekinyz
  */
-class SubstringConcatenationAllWords {
+public class SubstringConcatenationAllWords {
     List<Integer> findSubstring(String s, String[] words) {
         List<Integer> result = new ArrayList<>();
         for (int i = 0; i < s.length(); i++) {
@@ -30,9 +30,7 @@ class SubstringConcatenationAllWords {
                     j = s.length();
                 }
                 if (wList.size() == 0) {
-                    if (!result.contains(i)) {
-                        result.add(i);
-                    }
+                    result.add(i);
                 }
             }
         }
