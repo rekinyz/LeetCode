@@ -1,5 +1,4 @@
 # Leetcode Problems
-=========================
 
 ## Algorithms
 There are some typical approaches/techniques such as Divide-and-conquer (e.g. [Merge k sorted lists](https://rekinyz.wordpress.com/2015/02/15/merge-2k-sorted-lists-using-divide-and-conquer-approach/) ), Dynamic Programming (e.g. [Generate parentheses](https://rekinyz.wordpress.com/2015/02/13/generate-parentheses-using-dynamic-programming/)), Greedy, Backtracking (e.g. [Find letter combinations of a phone number](https://rekinyz.wordpress.com/2015/02/03/letter-combinations-of-a-phone-number/) ), Branch-and-Bound... that are useful for designing algorithms. 
