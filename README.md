@@ -15,5 +15,3 @@ Besides I have committed the predefined data structures into the util package as
 Since we are designing algorithm, some of the built-in methods of java objects or special data structure should not be used. For example using the methods other than charAt() of String object are IMO "cheating". I didn't notice this at the very beginning as well, when I get some time I will review the committed code again.
 
 enjoy solving!
-
-rekinyz
