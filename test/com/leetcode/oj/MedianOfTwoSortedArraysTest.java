@@ -1,6 +1,6 @@
 package com.leetcode.oj;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
@@ -15,7 +15,7 @@ public class MedianOfTwoSortedArraysTest {
 		int[] input2 = { 2, 3 };
 		assertEquals(2.0, findMedianSortedArrays(input1, input2), epsilon);
 	}
-
+/*
 	@Test
 	public void testFindMin2() {
 		int[] input1 = { 2, 3 };
@@ -57,8 +57,8 @@ public class MedianOfTwoSortedArraysTest {
 		int[] input2 = { 2, 3 };
 		assertEquals(2.5, findMedianSortedArrays(input1, input2), epsilon);
 	}
-	
-	private double findMedianSortedArrays(int[] input1, int[] input2){
+	*/
+	protected double findMedianSortedArrays(int[] input1, int[] input2){
 		return motsa.findMedianSortedArrays(input1, input2);
 	}
 }

@@ -38,7 +38,7 @@ public class RemoveDuplicatesFromSortedArrayTest {
 		assertEquals(1, removeDuplicates(input));
 	}
 
-	private int removeDuplicates(int[] input) {
+	protected int removeDuplicates(int[] input) {
 		return rdsa.removeDuplicates(input);
 	}
 }

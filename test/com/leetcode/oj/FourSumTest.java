@@ -14,7 +14,8 @@ public class FourSumTest {
 	FourSum fs = new FourSum();
 
 	private static final Comparator<List<Integer>> comp = new Comparator<List<Integer>>() {
-		public int compare(List<Integer> o1, List<Integer> o2) {
+		@Override
+        public int compare(List<Integer> o1, List<Integer> o2) {
 			if (o1 != null && o2 != null) {
 				int i = 0;
 				while (o1.get(i) == o2.get(i)) {
@@ -55,7 +56,7 @@ public class FourSumTest {
 		assertEquals(expectedList, resList);
 	}
 
-	private List<List<Integer>> fourSum(int[] num, int target) {
+	protected List<List<Integer>> fourSum(int[] num, int target) {
 		return fs.fourSum(num, target);
 	}
 

@@ -63,7 +63,7 @@ public class ContainerWithMostWaterTest {
 		assertEquals(18048, maxArea(height));
 	}
 
-	private int maxArea(int[] height) {
+	protected int maxArea(int[] height) {
 		return cmw.maxArea(height);
 	}
 }

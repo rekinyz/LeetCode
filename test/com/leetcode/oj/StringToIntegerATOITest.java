@@ -56,7 +56,7 @@ public class StringToIntegerATOITest {
 		assertEquals(0, atoi(s)); // 11228552307 overflow
 	}
 	
-	private int atoi(String s){
+	protected int atoi(String s){
 		return sti.atoi(s);
 	}
 

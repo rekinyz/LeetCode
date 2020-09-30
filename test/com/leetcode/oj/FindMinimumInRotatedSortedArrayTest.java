@@ -74,7 +74,7 @@ public class FindMinimumInRotatedSortedArrayTest {
 		assertEquals(0, findMin(num));
 	}
 	
-	private int findMin(int[] num){
+	protected int findMin(int[] num){
 		return sa.findMin(num);
 	}
 }

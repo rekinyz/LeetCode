@@ -66,7 +66,7 @@ public class GenerateParenthesesTest {
 		assertEquals(expected, result);
 	}
 
-	private List<String> generateParenthesis(int n) {
+	protected List<String> generateParenthesis(int n) {
 		return gp.generateParenthesis(n);
 	}
 }

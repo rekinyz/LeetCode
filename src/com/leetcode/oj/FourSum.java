@@ -27,7 +27,7 @@ public class FourSum {
 	public List<List<Integer>> fourSum(int[] num, int target) {
 		int len = num.length;
 		Arrays.sort(num);
-		Set<List<Integer>> set = new HashSet<>();
+		Set<List<Integer>> set = new HashSet<List<Integer>>();
 		for (int l = 0; l < len - 3; l++) {
 			for (int i = l + 1; i < len - 2; i++) {
 				for (int j = i + 1, k = len - 1; j < k;) {

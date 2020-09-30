@@ -34,7 +34,7 @@ public class MinimumDepthOfBinaryTreeTest {
 		assertEquals(3, minDepth(input));
 	}
 
-	private int minDepth(Integer[] input) {
+	protected int minDepth(Integer[] input) {
 		TreeNode root = TreeNode.convert(input);
 		return tree.minDepth(root);
 	}

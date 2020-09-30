@@ -38,7 +38,7 @@ public class SortListTest {
 		assertEquals(ListNode.convert(), null);
 	}
 
-	private ListNode sortList(int... array) {
+	protected ListNode sortList(int... array) {
 		ListNode node = ListNode.convert(array);
 		return sl.sortList(node);
 	}

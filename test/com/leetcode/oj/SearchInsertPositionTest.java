@@ -45,7 +45,7 @@ public class SearchInsertPositionTest {
 		assertEquals(40, searchInsert(input, 41));
 	}
 	
-	private int searchInsert(int[] A, int target){
+	protected int searchInsert(int[] A, int target){
 		return sip.searchInsert(A, target);
 	}
 

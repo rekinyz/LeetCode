@@ -43,7 +43,7 @@ public class ThreeSumClosestTest {
 		assertEquals(-1, threeSumClosest(num, target)); // 1 + (-1) + (-1) = -1
 	}
 
-	private int threeSumClosest(int[] num, int target) {
+	protected int threeSumClosest(int[] num, int target) {
 		return tsc.threeSumClosest(num, target);
 	}
 

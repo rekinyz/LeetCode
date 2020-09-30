@@ -36,7 +36,7 @@ public class AddBinaryTest {
 		assertEquals("11110", addBinary(a, b));
 	}
 	
-	private String addBinary(String a, String b) {
+	protected String addBinary(String a, String b) {
 		return ab.addBinary(a, b);
 	}
 }

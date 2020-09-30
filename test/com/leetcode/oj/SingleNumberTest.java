@@ -70,7 +70,7 @@ public class SingleNumberTest {
 		return res;
 	}
 
-	private int singleNumber(int[] A) {
+	public int singleNumber(int[] A) {
 		return sn.singleNumber(A);
 	}
 

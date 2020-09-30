@@ -45,7 +45,7 @@ public class AddTwoNumbersTest {
 		assertEquals(ListNode.convert(0, 1), addTwoNumbers(a1, a2));
 	}
 
-	private ListNode addTwoNumbers(int[] a1, int[] a2) {
+	public ListNode addTwoNumbers(int[] a1, int[] a2) {
 		ListNode l1 = ListNode.convert(a1);
 		ListNode l2 = ListNode.convert(a2);
 		return atn.addTwoNumbers(l1, l2);

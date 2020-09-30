@@ -51,7 +51,7 @@ public class PalindromeNumberTest {
 		assertFalse(isPalindrome(x));
 	}
 
-	private boolean isPalindrome(int x) {
+	protected boolean isPalindrome(int x) {
 		return pn.isPalindrome(x);
 	}
 

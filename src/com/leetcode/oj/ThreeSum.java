@@ -29,7 +29,7 @@ public class ThreeSum {
 	public List<List<Integer>> threeSum(int[] num) {
 		int len = num.length;
 		Arrays.sort(num);
-		List<List<Integer>> res = new ArrayList<>();
+		List<List<Integer>> res = new ArrayList<List<Integer>>();
 		for (int i = 0; i < len - 2; i++) {
 			if (i == 0 || (i > 0 && num[i] != num[i - 1])) {
 				for (int j = i + 1, k = len - 1; j < k;) {
@@ -56,7 +56,7 @@ public class ThreeSum {
 	public List<List<Integer>> threeSum1(int[] num) {
 		int len = num.length;
 		Arrays.sort(num);
-		Set<List<Integer>> set = new HashSet<>();
+		Set<List<Integer>> set = new HashSet<List<Integer>>();
 		for (int i = 0; i < len - 2; i++) {
 			for (int j = i + 1, k = len - 1; j < k;) {
 				if (num[i] + num[j] + num[k] < 0) {
@@ -76,8 +76,8 @@ public class ThreeSum {
 	// O(N²) performance still not good enough
 	public List<List<Integer>> threeSum2(int[] num) {
 		int len = num.length;
-		Set<List<Integer>> set = new HashSet<>();
-		Map<Integer, Integer> map = new HashMap<>(len);
+		Set<List<Integer>> set = new HashSet<List<Integer>>();
+		Map<Integer, Integer> map = new HashMap<Integer, Integer>(len);
 		for (int i = 0; i < len; i++) {
 			map.put(num[i], i);
 		}
@@ -100,7 +100,7 @@ public class ThreeSum {
 	public List<List<Integer>> threeSum3(int[] num) {
 		int len = num.length;
 		Arrays.sort(num);
-		Set<List<Integer>> set = new HashSet<>();
+		Set<List<Integer>> set = new HashSet<List<Integer>>();
 		for (int i = 0; i < len - 2; i++) {
 			for (int j = i + 1; j < len - 1; j++) {
 				int k = Arrays.binarySearch(num, 0 - num[i] - num[j]);
@@ -117,7 +117,7 @@ public class ThreeSum {
 	// O(N³)
 	public List<List<Integer>> threeSum4(int[] num) {
 		int len = num.length;
-		Set<List<Integer>> set = new HashSet<>();
+		Set<List<Integer>> set = new HashSet<List<Integer>>();
 		for (int i = 0; i < len - 2; i++) {
 			for (int j = i + 1; j < len - 1; j++) {
 				for (int k = j + 1; k < len; k++) {

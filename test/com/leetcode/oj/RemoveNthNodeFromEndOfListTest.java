@@ -34,7 +34,7 @@ public class RemoveNthNodeFromEndOfListTest {
 		assertEquals(null, removeNthFromEnd(input, 1));
 	}
 
-	private ListNode removeNthFromEnd(int[] input, int n) {
+	public ListNode removeNthFromEnd(int[] input, int n) {
 		ListNode head = ListNode.convert(input);
 		return rn.removeNthFromEnd(head, n);
 	}

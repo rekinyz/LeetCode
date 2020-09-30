@@ -1,6 +1,6 @@
 package com.leetcode.oj;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
@@ -62,7 +62,7 @@ public class BestTimeToBuyAndSellStock2Test {
 		assertEquals(7, maxProfit(input));
 	}
 
-	private int maxProfit(int[] input) {
+	protected int maxProfit(int[] input) {
 		return stock.maxProfit(input);
 	}
 }

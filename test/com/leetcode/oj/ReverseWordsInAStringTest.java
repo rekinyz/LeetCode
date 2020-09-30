@@ -38,7 +38,7 @@ public class ReverseWordsInAStringTest {
 		assertEquals("programming loves rekinyz", reverseWords(s));
 	}
 	
-	private String reverseWords(String input){
+	protected String reverseWords(String input){
 		return rwis.reverseWords(input);
 	}
 

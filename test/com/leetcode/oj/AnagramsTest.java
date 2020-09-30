@@ -29,7 +29,7 @@ public class AnagramsTest {
 		assertEquals(Arrays.asList("james stuart", "just a master"), anagrams(strs));
 	}
 	
-	private List<String> anagrams(String[] strs){
+	public List<String> anagrams(String[] strs){
 		return a.anagrams(strs);
 	}
 	

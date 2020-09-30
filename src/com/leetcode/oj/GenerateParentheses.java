@@ -28,7 +28,7 @@ public class GenerateParentheses {
 		} else if (n == 1) {
 			return Arrays.asList(P);
 		} else {
-			Set<String> set = new HashSet<>(n * 2);
+			Set<String> set = new HashSet<String>(n * 2);
 			for (String s : generateParenthesis(n - 1)) {
 				char[] ca = s.toCharArray();
 				int len = s.length();

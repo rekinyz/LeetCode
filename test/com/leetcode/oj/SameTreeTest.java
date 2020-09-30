@@ -53,7 +53,7 @@ public class SameTreeTest {
 		assertTrue(isSameTree(p, q));
 	}
 
-	private boolean isSameTree(Integer[] p, Integer[] q) {
+	protected boolean isSameTree(Integer[] p, Integer[] q) {
 		TreeNode t1 = TreeNode.convert(p);
 		TreeNode t2 = TreeNode.convert(q);
 		return tree.isSameTree(t1, t2);

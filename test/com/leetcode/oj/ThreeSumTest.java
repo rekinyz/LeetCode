@@ -14,7 +14,8 @@ public class ThreeSumTest {
 	ThreeSum ts = new ThreeSum();
 
 	private static final Comparator<List<Integer>> comp = new Comparator<List<Integer>>() {
-		public int compare(List<Integer> o1, List<Integer> o2) {
+		@Override
+        public int compare(List<Integer> o1, List<Integer> o2) {
 			if (o1 != null && o2 != null) {
 				int i = 0;
 				while (o1.get(i) == o2.get(i)) {
@@ -225,7 +226,7 @@ public class ThreeSumTest {
 		assertEquals(expectedList, resList);
 	}
 
-	private List<List<Integer>> threeSum(int[] num) {
+	protected List<List<Integer>> threeSum(int[] num) {
 		return ts.threeSum(num);
 	}
 

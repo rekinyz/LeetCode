@@ -1,6 +1,6 @@
 package com.leetcode.oj;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import java.util.Arrays;
 import java.util.List;
@@ -37,7 +37,7 @@ public class BinaryTreePreorderTraversalTest {
 		assertEquals(Arrays.asList(1, -2, 1, -1, 3, -3, -2), preorderTraversal(input));
 	}
 
-	private List<Integer> preorderTraversal(Integer[] input) {
+	protected List<Integer> preorderTraversal(Integer[] input) {
 		TreeNode root = TreeNode.convert(input);
 		return tree.preorderTraversal(root);
 	}

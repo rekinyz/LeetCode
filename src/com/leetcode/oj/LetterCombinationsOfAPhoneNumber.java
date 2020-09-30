@@ -31,7 +31,7 @@ public class LetterCombinationsOfAPhoneNumber {
 	public List<String> letterCombinations(String digits) {
 		List<String> res = Arrays.asList("");
 		for (char dig : digits.toCharArray()) {
-			List<String> track = new ArrayList<>();
+			List<String> track = new ArrayList<String>();
 			// dig-'0' means convert digit char to int as index of the LETTERS
 			for (char letter : LETTERS[dig - '0'].toCharArray()) {
 				for (String prefix : res) {
@@ -44,7 +44,7 @@ public class LetterCombinationsOfAPhoneNumber {
 	}
 
 	public List<String> letterCombinations1(String digits) {
-		List<String> res = new ArrayList<>();
+		List<String> res = new ArrayList<String>();
 		combination("", digits, 0, res);
 		return res;
 	}
@@ -59,7 +59,7 @@ public class LetterCombinationsOfAPhoneNumber {
 		}
 	}
 
-	private static final Map<Character, String> map = new HashMap<>();
+	private static final Map<Character, String> map = new HashMap<Character, String>();
 	static {
 		map.put('2', "abc");
 		map.put('3', "def");
@@ -74,7 +74,7 @@ public class LetterCombinationsOfAPhoneNumber {
 	public List<String> letterCombinations2(String digits) {
 		List<String> res = Arrays.asList("");
 		for (char dig : digits.toCharArray()) {
-			List<String> track = new ArrayList<>();
+			List<String> track = new ArrayList<String>();
 			for (char letter : map.get(dig).toCharArray()) {
 				for (String prefix : res) {
 					track.add(prefix + letter);

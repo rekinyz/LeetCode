@@ -47,12 +47,12 @@ public class LinkedListCycleTest {
 		assertTrue(hasCycle(input, 4));
 	}
 
-	private boolean hasCycle(int[] input) {
+	public boolean hasCycle(int[] input) {
 		ListNode list = ListNode.convert(input);
 		return linkedList.hasCycle(list);
 	}
 
-	private boolean hasCycle(int[] input, int n) {
+	public boolean hasCycle(int[] input, int n) {
 		ListNode list = ListNode.cycle(input, n);
 		return linkedList.hasCycle(list);
 	}
